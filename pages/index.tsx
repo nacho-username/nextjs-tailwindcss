@@ -15,7 +15,14 @@ const Home = ({ homepage, error }: { homepage: any; error: any }) => {
         description: MetaDescription,
       }}
     >
-      <h1>{title}</h1>
+      <main className='bg-hero-image bg-no-repeat bg-cover bg-center h-full'>
+        <div className='container mx-auto flex w-full'>
+          <div className='w-1/2 py-32 text-white'>
+            <h1 className='text-6xl font-bold'>{title}</h1>
+            <p className='text-2xl'>{hero.description}</p>
+          </div>
+        </div>
+      </main>
     </Layout>
   )
 }
