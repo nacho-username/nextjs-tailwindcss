@@ -2,10 +2,11 @@ import Layout from '../components/Layout'
 import axios from 'axios'
 import Hero from '../components/Homepage/Hero'
 import WhoWeAreSection from '../components/Homepage/WhoWeAreSection'
+import CallToActionCardList from '../components/Homepage/CallToActionCardList'
 
 const Home = ({ homepage, error }: { homepage: any; error: any }) => {
   const { MetaDescription, MetaTitle } = homepage.data.attributes.MetaSeo[0]
-  console.log(homepage.data.attributes)
+
   if (error) {
     return <div>Something went wrong</div>
   }
@@ -19,6 +20,10 @@ const Home = ({ homepage, error }: { homepage: any; error: any }) => {
     >
       <Hero homepageData={homepage.data.attributes.hero} />
       <WhoWeAreSection whoWeAreData={homepage.data.attributes.headerWhoWeAre} />
+      <CallToActionCardList
+        showcaseCardData={homepage.data.attributes.showcaseCard}
+        connectCardData={homepage.data.attributes.connectCard}
+      />
     </Layout>
   )
 }
