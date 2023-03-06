@@ -14,6 +14,10 @@ module.exports = {
         'hero-image': "url('../public/images/hero-background.png')",
       },
     },
+    colors: {
+      primary: '#a3e635',
+      secondary: '#0F0F0F',
+    },
   },
   plugins: [],
 }
