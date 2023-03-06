@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
   content: [
     './app/**/*.{js,ts,jsx,tsx}',
@@ -13,10 +14,9 @@ module.exports = {
       backgroundImage: {
         'hero-image': "url('../public/images/hero-background.png')",
       },
-    },
-    colors: {
-      primary: '#a3e635',
-      secondary: '#0F0F0F',
+      colors: {
+        'dark-grey': '#0F0F0F',
+      },
     },
   },
   plugins: [],
