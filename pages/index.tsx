@@ -19,7 +19,7 @@ const Home = ({ homepage, error }: { homepage: any; error: any }) => {
       }}
     >
       <Hero homepageData={homepage.data.attributes.hero} />
-      <WhoWeAreSection headerWhoWeAre={headerWhoWeAre} />
+      <WhoWeAreSection whoWeAreData={homepage.data.attributes.headerWhoWeAre} />
     </Layout>
   )
 }
