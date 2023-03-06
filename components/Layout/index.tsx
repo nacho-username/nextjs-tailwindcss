@@ -17,9 +17,9 @@ export default function Layout({
         <meta name='description' content={description} />
         <link rel='icon' href={icon || '/favicon.ico'} />
       </Head>
-      <main>
+      <main className='w-full h-screen bg-slate-900 relative'>
         <Header />
-        <main>{children}</main>
+        {children}
         <Footer />
       </main>
     </>
