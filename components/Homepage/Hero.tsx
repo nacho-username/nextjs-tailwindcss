@@ -5,7 +5,6 @@ interface HeroProps {
 }
 
 export default function Hero({ homepageData }: { homepageData: HeroProps }) {
-  console.log(homepageData)
   const { title, description } = homepageData
   return (
     <main className='bg-hero-image bg-no-repeat bg-cover bg-center h-full'>
