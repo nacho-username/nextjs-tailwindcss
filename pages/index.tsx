@@ -19,7 +19,7 @@ const Home = ({ homepage, error }: { homepage: any; error: any }) => {
     >
       <main className='bg-hero-image bg-no-repeat bg-cover bg-center h-full'>
         <div className='container mx-auto flex w-full items-center h-full'>
-          <div className='w-1/2 py-32 text-white'>
+          <div className='w-1/2 pt-36 text-white'>
             <h1 className='text-7xl font-extrabold capitalize'>{hero.title}</h1>
             <p className='text-2xl font-light text-md py-4 pb-8 leading-10'>
               {hero.description}
