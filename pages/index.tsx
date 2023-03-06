@@ -4,7 +4,7 @@ import Hero from '../components/Homepage/Hero'
 import WhoWeAreSection from '../components/Homepage/WhoWeAreSection'
 
 const Home = ({ homepage, error }: { homepage: any; error: any }) => {
-  const { title, hero, headerWhoWeAre } = homepage.data.attributes
+  const { headerWhoWeAre } = homepage.data.attributes
   const { MetaDescription, MetaTitle } = homepage.data.attributes.MetaSeo[0]
   console.log(homepage.data.attributes)
   if (error) {
@@ -18,7 +18,7 @@ const Home = ({ homepage, error }: { homepage: any; error: any }) => {
         description: MetaDescription,
       }}
     >
-      <Hero hero={hero} />
+      <Hero homepageData={homepage.data.attributes.hero} />
       <WhoWeAreSection headerWhoWeAre={headerWhoWeAre} />
     </Layout>
   )
