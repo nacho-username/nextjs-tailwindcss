@@ -3,9 +3,10 @@ import axios from 'axios'
 import Hero from '../components/Homepage/Hero'
 import WhoWeAreSection from '../components/Homepage/WhoWeAreSection'
 import CallToActionCardList from '../components/Homepage/CallToActionCardList'
+import WhyNextSection from '../components/Homepage/WhyNExtSection'
 
-const Home = ({ homepage, error }: { homepage: any; error: any }) => {
-  const { MetaDescription, MetaTitle } = homepage.data.attributes.MetaSeo[0]
+const Home = ({ data, error }: { data: any; error: any }) => {
+  const { MetaDescription, MetaTitle } = data.MetaSeo[0]
 
   if (error) {
     return <div>Something went wrong</div>
@@ -18,11 +19,15 @@ const Home = ({ homepage, error }: { homepage: any; error: any }) => {
         description: MetaDescription,
       }}
     >
-      <Hero homepageData={homepage.data.attributes.hero} />
-      <WhoWeAreSection whoWeAreData={homepage.data.attributes.headerWhoWeAre} />
+      <Hero homepageData={data.hero} />
+      <WhoWeAreSection whoWeAreData={data.headerWhoWeAre} />
       <CallToActionCardList
-        showcaseCardData={homepage.data.attributes.showcaseCard}
-        connectCardData={homepage.data.attributes.connectCard}
+        showcaseCardData={data.showcaseCard}
+        connectCardData={data.connectCard}
+      />
+      <WhyNextSection
+        whyNextHeader={data.headerWhyNext}
+        featureCards={data.NextFeatureCards}
       />
     </Layout>
   )
@@ -36,7 +41,7 @@ export async function getServerSideProps() {
     const homepage = res.data
     return {
       props: {
-        homepage,
+        data: homepage.data.attributes,
       },
     }
   } catch (error: any) {
