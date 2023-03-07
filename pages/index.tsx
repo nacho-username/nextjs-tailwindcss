@@ -29,7 +29,9 @@ const Home = ({ homepage, error }: { homepage: any; error: any }) => {
 }
 
 export async function getServerSideProps() {
-  const res = await axios.get('http://localhost:1337/api/homepage?populate=*')
+  const res = await axios.get(
+    'http://localhost:1337/api/homepage?populate=deep'
+  )
   try {
     const homepage = res.data
     return {
