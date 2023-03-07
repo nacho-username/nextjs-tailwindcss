@@ -16,7 +16,7 @@ export default function Hero({
   return (
     <main
       style={{ backgroundImage: `url(http://localhost:1337${heroBgImage})` }}
-      className='bg-deep-purple  bg-no-repeat bg-cover bg-center w-full h-[90%]'
+      className='bg-deep-purple bg-no-repeat bg-cover bg-center w-full h-[70%] md:h-[90%]'
     >
       <div className='container mx-auto flex flex-wrap w-full items-center h-full'>
         <div className='w-[90%] md:w-[60%] pt-8 md:pt-2 text-white px-4'>
