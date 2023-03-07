@@ -17,7 +17,7 @@ export default function CallToActionCard({
   console.log(image)
   if (backgroundColour === 'solid') {
     return (
-      <div className='h-auto rounded-xl pt-8 px-16 w-full mx-8 md:mx-0 md:w-1/3 overflow-hidden shadow-2xl bg-dark-grey'>
+      <div className='min-h-[500px] rounded-xl pt-8 px-16 w-full mx-8 md:mx-0 md:w-1/3 overflow-hidden shadow-2xl bg-dark-grey'>
         <div className='flex flex-col items-start text-white gap-4'>
           <h4 className='text-sm font-light uppercase'>{subHeading}</h4>
           <h2 className=' text-2xl md:text-5xl font-bold'>{headline}</h2>
