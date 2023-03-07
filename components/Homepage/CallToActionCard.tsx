@@ -14,7 +14,6 @@ export default function CallToActionCard({
   subHeading,
   image,
 }: callToActionCardProps) {
-  console.log(image)
   if (backgroundColour === 'solid') {
     return (
       <div className='min-h-[500px] rounded-xl pt-8 px-16 w-full mx-8 md:mx-0 md:w-1/3 overflow-hidden shadow-2xl bg-dark-grey'>
