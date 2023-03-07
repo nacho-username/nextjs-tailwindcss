@@ -22,7 +22,7 @@ export default function CallToActionCardList({
   connectCardData: connectCardData
 }) {
   return (
-    <div className='flex justify-center gap-24 -mt-64 py-24 '>
+    <div className='flex flex-wrap justify-center gap-8 md:gap-24 -mt-32 md:-mt-64 py-24 '>
       <CallToActionCard
         backgroundColour={showcaseCardData.backgroundColour}
         headline={showcaseCardData.headline}
