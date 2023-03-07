@@ -23,7 +23,7 @@ export default function Layout({
         <meta name='description' content={description} />
         <link rel='icon' href={icon || '/favicon.ico'} />
       </Head>
-      <main className='w-full h-screen bg-slate-900 relative'>
+      <main className='w-full h-screen bg-deep-purple relative'>
         <Header />
         {children}
         <Footer />
