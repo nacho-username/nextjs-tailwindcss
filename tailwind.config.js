@@ -12,10 +12,11 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'hero-image': "url('../public/images/hero-background.png')",
+        'hero-image': "url('../public/images/macbook-pro-hero.png')",
       },
       colors: {
         'dark-grey': '#0F0F0F',
+        'deep-purple': '#130A24',
       },
     },
   },
