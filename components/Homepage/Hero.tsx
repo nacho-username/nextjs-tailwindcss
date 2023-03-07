@@ -7,7 +7,7 @@ interface HeroProps {
 export default function Hero({ homepageData }: { homepageData: HeroProps }) {
   const { title, description } = homepageData
   return (
-    <main className='bg-deep-purple bg-hero-image bg-no-repeat bg-cover bg-center w-full h-screen'>
+    <main className='bg-deep-purple bg-hero-image bg-no-repeat bg-cover bg-center w-full h-[90%]'>
       <div className='container mx-auto flex flex-wrap w-full items-center h-full'>
         <div className='w-[90%] md:w-[60%] pt-8 md:pt-2 text-white px-4'>
           <h1 className='text-5xl md:text-7xl font-extrabold capitalize'>
