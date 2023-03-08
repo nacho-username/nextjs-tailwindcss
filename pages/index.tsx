@@ -3,7 +3,7 @@ import axios from 'axios'
 import Hero from '../components/Homepage/Hero'
 import WhoWeAreSection from '../components/Homepage/WhoWeAreSection'
 import CallToActionCardList from '../components/Homepage/CallToActionCardList'
-import WhyNextSection from '../components/Homepage/WhyNExtSection'
+import SectionWhyNext from '../components/Homepage/SectionWhyNext'
 
 const Home = ({ data, error }: { data: any; error: any }) => {
   const { MetaDescription, MetaTitle } = data.MetaSeo[0]
@@ -25,7 +25,7 @@ const Home = ({ data, error }: { data: any; error: any }) => {
         showcaseCardData={data.showcaseCard}
         connectCardData={data.connectCard}
       />
-      <WhyNextSection
+      <SectionWhyNext
         whyNextHeader={data.headerWhyNext}
         featureCards={data.NextFeatureCards}
       />
