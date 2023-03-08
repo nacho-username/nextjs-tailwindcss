@@ -25,7 +25,7 @@ export default function SectionWhyNext({
       <p className='w-[80%] md:w-2/3 mx-auto text-lg md:text-2xl font-medium pt-4 md:pt-8 leading-7 md:leading-10'>
         {description}
       </p>
-      <div className='grid grid-cols-1 md:grid-cols-3 gap-8 pt-8 md:py-16'>
+      <div className='grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 pt-8 md:py-16'>
         {featureCards.map((feature, index) => (
           <div
             key={index}
@@ -43,7 +43,7 @@ export default function SectionWhyNext({
         ))}
       </div>
       <SolidButton
-        classes='mt-36 bg-gradient-to-tr from-teal-300 to-teal-900 text-dark-grey hover:bg-gradient-to-tl hover:from-teal-300 hover:to-teal-900'
+        classes='mt-36 bg-gradient-to-tr from-teal-300 to-teal-900 text-white hover:bg-gradient-to-tl hover:from-teal-300 hover:to-teal-900'
         label='let’s build something great'
         href='contact'
       />
