@@ -22,7 +22,6 @@ export default function SectionNextShowcase({
   nextShowcaseHeader: nextShowcaseProps
 }) {
   const { title } = nextShowcaseHeader
-  console.log(nextShowcaseData[0].image.data.attributes.url)
   return (
     <section className='bg-beige text-center pt-8 pb-16 px-16 text-deep-grey'>
       <h3 className='w-[80%] md:w-2/3 mx-auto uppercase text-4xl font-bold'>
@@ -43,26 +42,20 @@ export default function SectionNextShowcase({
                 width={showcase.image.data.attributes.width}
                 height={showcase.image.data.attributes.height}
               />
-              <Link
-                className='text-lg pt-4 md:pt-8 group-hover:text-white'
-                href={showcase.websiteLink}
-                target='_blank'
-              >
-                <div className='opacity-0 hover:opacity-100 duration-300 bg-white m-8 p-4 absolute inset-0 flex flex-col items-center justify-center text-center text-dark-grey'>
-                  <h4 className='text-xl font-bold uppercase '>
-                    {showcase.titleHover}
-                  </h4>
-                  <p className='text-sm font-light'>
-                    {showcase.titleDescription}
-                  </p>
 
-                  <SolidButton
-                    classes='bg-deep-purple text-white mt-4 py-2 px-6'
-                    label='view site'
-                    href={showcase.websiteLink}
-                  />
-                </div>
-              </Link>
+              <div className='opacity-0 hover:opacity-100 duration-300 bg-white m-8 p-6 absolute inset-0 flex flex-col items-center justify-center text-center text-dark-grey'>
+                <h4 className='text-xl font-bold uppercase '>
+                  {showcase.titleHover}
+                </h4>
+                <p className='text-xs leading-5 font-light'>
+                  {showcase.titleDescription}
+                </p>
+                <SolidButton
+                  classes='bg-deep-purple text-white mt-4 py-2 px-6'
+                  label='view site'
+                  href={showcase.websiteLink}
+                />
+              </div>
             </div>
           </div>
         ))}
