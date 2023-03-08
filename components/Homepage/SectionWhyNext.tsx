@@ -30,11 +30,11 @@ export default function SectionWhyNext({
         {featureCards.map((feature, index) => (
           <div
             key={index}
-            className={`flex flex-col items-start justify-start text-left p-4 md:p-8 rounded-lg bg-white shadow-xl hover:bg-deep-purple group cursor-pointer ${
+            className={`flex flex-col items-start justify-start text-left p-4 md:p-8 rounded-lg bg-white shadow-xl hover:bg-deep-purple group cursor-pointer text-dark-grey ${
               feature.width === 'two/thirds' ? 'col-span-2' : 'col-span-1'
             }`}
           >
-            <h4 className='text-3xl font-bold group-hover:text-white'>
+            <h4 className='text-3xl font-bold capitalize group-hover:text-white'>
               {feature.title}
             </h4>
             <p className='text-lg pt-4 md:pt-8 group-hover:text-white'>
