@@ -6,6 +6,8 @@ interface callToActionCardProps {
   headline: string
   subHeading: string
   image: any
+  buttonLabel: string
+  buttonLink: string
 }
 
 export default function CallToActionCard({
@@ -13,10 +15,12 @@ export default function CallToActionCard({
   headline,
   subHeading,
   image,
+  buttonLabel,
+  buttonLink,
 }: callToActionCardProps) {
   if (backgroundColour === 'solid') {
     return (
-      <div className='h-auto md:min-h-[500px] rounded-xl pt-8 px-4 md:px-16 w-[45%] md:mx-0 md:w-1/3 overflow-hidden shadow-2xl bg-dark-grey'>
+      <div className='h-auto md:min-h-[500px] rounded-xl pt-8 px-4 md:px-12 w-[45%] md:mx-0 md:w-1/3 overflow-hidden shadow-2xl bg-dark-grey'>
         <div className='flex flex-col items-start text-white gap-2 md:gap-4'>
           <h4 className='text-xs md:text-sm font-light uppercase'>
             {subHeading}
@@ -25,8 +29,8 @@ export default function CallToActionCard({
             {headline}
           </h2>
           <SolidButton
-            label='take me there'
-            href='our-work'
+            label={buttonLabel}
+            href={buttonLink}
             classes={
               'bg-gradient-to-r from-teal-400 to-teal-800 text-white py-2 px-4 md:py-4 md:px-12 text-[10px] md:text-xs md:mt-8'
             }
@@ -45,7 +49,7 @@ export default function CallToActionCard({
 
   if (backgroundColour === 'gradient') {
     return (
-      <div className='h-auto md:min-h-[500px] rounded-xl pt-8 px-4 md:px-16 w-[45%] md:mx-0 md:w-1/3 overflow-hidden shadow-2xl bg-gradient-to-tl from-teal-400 to-teal-700'>
+      <div className='h-auto md:min-h-[500px] rounded-xl pt-8 px-4 md:px-12 w-[45%] md:mx-0 md:w-1/3 overflow-hidden shadow-2xl bg-gradient-to-tl from-teal-400 to-teal-700'>
         <div className='flex flex-col items-start text-white gap-2 md:gap-4'>
           <h4 className='text-xs md:text-sm font-light uppercase'>
             {subHeading}
@@ -54,8 +58,8 @@ export default function CallToActionCard({
             {headline}
           </h2>
           <SolidButton
-            label='get in touch'
-            href='contact'
+            label={buttonLabel}
+            href={buttonLink}
             classes={
               'bg-dark-grey text-white py-2 px-4 md:py-4 md:px-12 text-[10px] md:text-xs md:mt-8'
             }

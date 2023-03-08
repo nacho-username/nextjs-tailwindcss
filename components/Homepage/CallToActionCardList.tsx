@@ -6,12 +6,16 @@ interface showcaseCardData {
   headline: string
   subHeading: string
   image: any
+  buttonLabel: string
+  buttonLink: string
 }
 interface connectCardData {
   backgroundColour: string
   headline: string
   subHeading: string
   image: any
+  buttonLabel: string
+  buttonLink: string
 }
 
 export default function CallToActionCardList({
@@ -29,12 +33,16 @@ export default function CallToActionCardList({
           headline={showcaseCardData.headline}
           subHeading={showcaseCardData.subHeading}
           image={showcaseCardData.image.data.attributes}
+          buttonLabel={showcaseCardData.buttonLabel}
+          buttonLink={showcaseCardData.buttonLink}
         />
         <CallToActionCard
           backgroundColour={connectCardData.backgroundColour}
           headline={connectCardData.headline}
           subHeading={connectCardData.subHeading}
           image={connectCardData.image.data.attributes}
+          buttonLabel={connectCardData.buttonLabel}
+          buttonLink={connectCardData.buttonLink}
         />
       </div>
     </div>
