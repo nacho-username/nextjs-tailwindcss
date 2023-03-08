@@ -16,7 +16,7 @@ export const SolidButton: React.FC<Props> = ({
   return (
     <Link
       href={`/${href}`}
-      className={`py-3 px-8 rounded-xl font-bold text-xs uppercase transition duration-300 ease-in-out ${classes}`}
+      className={`rounded-full font-bold text-xs uppercase transition duration-300 ease-in-out ${classes}`}
     >
       {label}
     </Link>
