@@ -4,6 +4,7 @@ import Hero from '../components/Homepage/Hero'
 import WhoWeAreSection from '../components/Homepage/WhoWeAreSection'
 import CallToActionCardList from '../components/Homepage/CallToActionCardList'
 import SectionWhyNext from '../components/Homepage/SectionWhyNext'
+import SectionNextShowcase from '../components/Homepage/SectionNextShowcase'
 
 const Home = ({ data, error }: { data: any; error: any }) => {
   const { MetaDescription, MetaTitle } = data.MetaSeo[0]
@@ -29,6 +30,7 @@ const Home = ({ data, error }: { data: any; error: any }) => {
         whyNextHeader={data.headerWhyNext}
         featureCards={data.NextFeatureCards}
       />
+      <SectionNextShowcase nextShowcaseData={data.portfolioHeaderNext} />
     </Layout>
   )
 }

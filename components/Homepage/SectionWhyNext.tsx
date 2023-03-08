@@ -1,4 +1,5 @@
 import { SolidButton } from '../Buttons/SolidButton'
+import SectionNextShowcase from './SectionNextShowcase'
 
 interface whyNextHeaderProps {
   title: string
@@ -43,7 +44,7 @@ export default function SectionWhyNext({
         ))}
       </div>
       <SolidButton
-        classes='mt-36 bg-gradient-to-tr from-teal-300 to-teal-900 text-white hover:bg-gradient-to-tl hover:from-teal-300 hover:to-teal-900'
+        classes='mt-36 bg-gradient-to-tr from-teal-300 to-teal-900 text-white hover:bg-gradient-to-tl hover:from-teal-400 hover:to-teal-800'
         label='let’s build something great'
         href='contact'
       />
