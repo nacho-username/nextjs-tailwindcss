@@ -22,19 +22,21 @@ export default function CallToActionCardList({
   connectCardData: connectCardData
 }) {
   return (
-    <div className='flex flex-wrap justify-center gap-4 md:gap-24 -mt-32 md:-mt-64 py-12 md:py-24 bg-beige'>
-      <CallToActionCard
-        backgroundColour={showcaseCardData.backgroundColour}
-        headline={showcaseCardData.headline}
-        subHeading={showcaseCardData.subHeading}
-        image={showcaseCardData.image.data.attributes}
-      />
-      <CallToActionCard
-        backgroundColour={connectCardData.backgroundColour}
-        headline={connectCardData.headline}
-        subHeading={connectCardData.subHeading}
-        image={connectCardData.image.data.attributes}
-      />
+    <div className=' py-12 md:py-24 bg-beige'>
+      <div className='flex flex-wrap justify-center gap-4 md:gap-24 md:-mt-64'>
+        <CallToActionCard
+          backgroundColour={showcaseCardData.backgroundColour}
+          headline={showcaseCardData.headline}
+          subHeading={showcaseCardData.subHeading}
+          image={showcaseCardData.image.data.attributes}
+        />
+        <CallToActionCard
+          backgroundColour={connectCardData.backgroundColour}
+          headline={connectCardData.headline}
+          subHeading={connectCardData.subHeading}
+          image={connectCardData.image.data.attributes}
+        />
+      </div>
     </div>
   )
 }
