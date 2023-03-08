@@ -30,7 +30,10 @@ const Home = ({ data, error }: { data: any; error: any }) => {
         whyNextHeader={data.headerWhyNext}
         featureCards={data.NextFeatureCards}
       />
-      <SectionNextShowcase nextShowcaseData={data.portfolioHeaderNext} />
+      <SectionNextShowcase
+        nextShowcaseHeader={data.portfolioHeaderNext}
+        nextShowcaseData={data.showcaseNext}
+      />
     </Layout>
   )
 }
