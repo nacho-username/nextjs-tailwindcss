@@ -27,7 +27,7 @@ export default function SectionNextShowcase({
       <h3 className='w-[80%] md:w-2/3 mx-auto uppercase text-4xl font-bold'>
         {title}
       </h3>
-      <div className='grid grid-cols-1 md:grid-cols-4 gap-4 pt-8 pb-12'>
+      <div className='container mx-auto grid grid-cols-1 md:grid-cols-4 gap-4 pt-8 pb-12'>
         {nextShowcaseData.map((showcase, index) => (
           <div
             key={index}

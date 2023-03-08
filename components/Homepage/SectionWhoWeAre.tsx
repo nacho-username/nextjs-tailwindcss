@@ -5,7 +5,7 @@ interface whoWeAreDataProps {
   description: string
 }
 
-export default function WhoWeAreSection({
+export default function SectionWhoWeAre({
   whoWeAreData,
 }: {
   whoWeAreData: whoWeAreDataProps
