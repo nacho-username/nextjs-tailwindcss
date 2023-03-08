@@ -1,10 +1,11 @@
 import Layout from '../components/Layout'
 import axios from 'axios'
 import Hero from '../components/Homepage/Hero'
-import WhoWeAreSection from '../components/Homepage/WhoWeAreSection'
+import WhoWeAreSection from '../components/Homepage/SectionWhoWeAre'
 import CallToActionCardList from '../components/Homepage/CallToActionCardList'
 import SectionWhyNext from '../components/Homepage/SectionWhyNext'
 import SectionNextShowcase from '../components/Homepage/SectionNextShowcase'
+import SectionServices from '../components/Homepage/SectionServices'
 
 const Home = ({ data, error }: { data: any; error: any }) => {
   const { MetaDescription, MetaTitle } = data.MetaSeo[0]
@@ -33,6 +34,10 @@ const Home = ({ data, error }: { data: any; error: any }) => {
       <SectionNextShowcase
         nextShowcaseHeader={data.portfolioHeaderNext}
         nextShowcaseData={data.showcaseNext}
+      />
+      <SectionServices
+        serviceHeader={data.servicesWeOfferHeader}
+        servicesList={data.servicesWeOffer}
       />
     </Layout>
   )
