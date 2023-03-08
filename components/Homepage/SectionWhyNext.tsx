@@ -20,7 +20,7 @@ export default function SectionWhyNext({
 }) {
   const { title, description } = whyNextHeader
   return (
-    <section className='bg-beige text-center px-16 text-deep-grey pt-2 pb-32 md:pb-64'>
+    <section className='bg-beige text-center px-16 text-deep-grey pt-2 pb-32'>
       <div className='w-16 h-1 mx-auto border-0 bg-green-300 bg-gradient-to-r from-green-300 to-green-900 mb-4'></div>
       <h3 className='uppercase text-sm'>{title}</h3>
       <p className='w-[80%] md:w-2/3 mx-auto text-lg md:text-2xl font-medium pt-4 md:pt-8 leading-7 md:leading-10'>
