@@ -23,7 +23,7 @@ export default function SectionNextShowcase({
 }) {
   const { title } = nextShowcaseHeader
   return (
-    <section className='bg-beige text-center pt-8 pb-16 px-16 text-deep-grey'>
+    <section className='bg-beige text-center pt-8 px-16 text-deep-grey'>
       <h3 className='w-[80%] md:w-2/3 mx-auto uppercase text-4xl font-bold'>
         {title}
       </h3>
@@ -60,11 +60,6 @@ export default function SectionNextShowcase({
           </div>
         ))}
       </div>
-      <SolidButton
-        classes='bg-gradient-to-tr from-teal-300 to-teal-900 text-white hover:bg-gradient-to-tl hover:from-teal-400 hover:to-teal-800 py-4 px-8'
-        label='let’s build something great'
-        href='contact'
-      />
     </section>
   )
 }
