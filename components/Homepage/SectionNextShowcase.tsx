@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { SolidButton } from '../Buttons/SolidButton'
+import { SolidButton } from '../Shared/SolidButton'
 
 interface nextShowcaseProps {
   title: string

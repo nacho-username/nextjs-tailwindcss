@@ -1,4 +1,4 @@
-import { BorderButton } from '../Buttons/BorderButton'
+import { BorderButton } from '../Shared/BorderButton'
 interface HomepageProps {
   title: string
   description: string

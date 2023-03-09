@@ -1,4 +1,4 @@
-import { SolidButton } from '../Buttons/SolidButton'
+import { SolidButton } from '../Shared/SolidButton'
 import SectionNextShowcase from './SectionNextShowcase'
 
 interface whyNextHeaderProps {

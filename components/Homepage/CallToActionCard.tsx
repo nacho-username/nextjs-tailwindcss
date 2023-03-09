@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { SolidButton } from '../Buttons/SolidButton'
+import { SolidButton } from '../Shared/SolidButton'
 
 interface callToActionCardProps {
   backgroundColour: string
