@@ -23,8 +23,8 @@ export default function SectionNextShowcase({
 }) {
   const { title } = nextShowcaseHeader
   return (
-    <section className='bg-beige text-center pt-8 px-16 text-deep-grey'>
-      <h3 className='w-[80%] md:w-2/3 mx-auto uppercase text-4xl font-bold'>
+    <section className='bg-beige text-center pt-16 px-16 text-deep-grey'>
+      <h3 className='w-[80%] md:w-1/2 mx-auto capitalize text-3xl font-bold'>
         {title}
       </h3>
       <div className='container mx-auto grid grid-cols-1 md:grid-cols-4 gap-4 pt-8 pb-12'>
