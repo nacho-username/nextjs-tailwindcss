@@ -43,6 +43,11 @@ export default function SectionWhyNext({
           </div>
         ))}
       </div>
+      <SolidButton
+        classes='bg-dark-grey text-white mt-4 py-4 px-12'
+        label="Let's Connect"
+        href='contact'
+      />
     </section>
   )
 }
