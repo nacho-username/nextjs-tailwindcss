@@ -3,6 +3,7 @@ interface HeaderProps {
   description?: string
   dark?: boolean
   classes?: string
+  alignment?: string
 }
 
 export default function Header({
@@ -10,11 +11,12 @@ export default function Header({
   description,
   dark,
   classes,
+  alignment,
 }: HeaderProps) {
   return (
-    <>
+    <div className={`flex flex-col items-${alignment} ${classes}`}>
       <div
-        className={`w-16 h-1 border-0 bg-gradient-to-r from-teal-300 to-teal-900 mb-2 ${classes}`}
+        className={`w-16 h-1 border-0 bg-gradient-to-r from-teal-300 to-teal-900 mb-2`}
       ></div>
       <h3
         className={`uppercase text-sm ${
@@ -30,6 +32,6 @@ export default function Header({
       >
         {description}
       </p>
-    </>
+    </div>
   )
 }
