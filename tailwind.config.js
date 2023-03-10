@@ -18,6 +18,7 @@ module.exports = {
         'dark-grey': '#0F0F0F',
         'deep-purple': '#130A24',
         'light-purple': '#261447',
+        green: '#10DEB2',
         beige: '#F8F5F3',
       },
       cursor: {

@@ -14,11 +14,16 @@ export const SolidButton: React.FC<Props> = ({
   classes,
 }) => {
   return (
+    //   <button class="group relative h-12 w-48 overflow-hidden rounded-lg bg-white text-lg shadow">
+    //   <div class="absolute inset-0 w-3 bg-amber-400 transition-all duration-[250ms] ease-out group-hover:w-full"></div>
+    //   <span class="relative text-black group-hover:text-white">Hover me!</span>
+    // </button>
     <Link
       href={`/${href}`}
-      className={`rounded-tl-lg rounded-br-lg font-bold text-xs uppercase inline-block transition-scale ease-in delay-75 hover:scale-95 ${classes}`}
+      className={`w-48 rounded-tl-lg rounded-br-lg font-bold text-xs uppercase inline-block relative overflow-hidden group ${classes}`}
     >
-      {label}
+      <div className='absolute inset-0 w-0 bg-green transition-all duration-[250ms] ease-out group-hover:w-full'></div>
+      <div className='relative group-hover:text-white'>{label}</div>
     </Link>
   )
 }
