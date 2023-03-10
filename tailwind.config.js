@@ -20,6 +20,9 @@ module.exports = {
         'light-purple': '#261447',
         beige: '#F8F5F3',
       },
+      cursor: {
+        pointer: 'url(../public/images/cursor-pointer.png), pointer',
+      },
     },
   },
   plugins: [],
