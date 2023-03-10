@@ -32,7 +32,7 @@ export default function CallToActionCard({
             label={buttonLabel}
             href={buttonLink}
             classes={
-              'bg-gradient-to-r from-teal-400 to-teal-800 text-white py-2 px-4 md:py-4 md:px-12 text-[10px] md:text-xs md:mt-8 cursor-pointer'
+              'bg-gradient-to-r from-teal-400 to-teal-800 text-white py-2 md:py-4  text-[10px] md:text-xs md:mt-8 cursor-pointer'
             }
           />
         </div>
@@ -61,7 +61,7 @@ export default function CallToActionCard({
             label={buttonLabel}
             href={buttonLink}
             classes={
-              'bg-dark-grey text-white py-2 px-4 md:py-4 md:px-12 text-[10px] md:text-xs md:mt-8 cursor-pointer'
+              'bg-dark-grey text-white py-2 text-center md:py-4 text-[10px] md:text-xs md:mt-8 cursor-pointer'
             }
           />
         </div>
