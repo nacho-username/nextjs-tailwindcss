@@ -51,7 +51,7 @@ export default function SectionNextShowcase({
                   {showcase.titleDescription}
                 </p>
                 <SolidButton
-                  classes='bg-deep-purple text-white mt-4 py-2 px-6'
+                  classes='bg-deep-purple text-white mt-4 py-2 px-6 cursor-pointer'
                   label='view site'
                   href={showcase.websiteLink}
                 />

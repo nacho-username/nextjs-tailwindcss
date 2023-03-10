@@ -30,7 +30,7 @@ export default function SectionWhyNext({
         {featureCards.map((feature, index) => (
           <div
             key={index}
-            className={`flex flex-col items-start justify-start text-left p-4 md:p-8 rounded-lg bg-white shadow-xl hover:bg-deep-purple group hover:cursor-cell text-dark-grey ${
+            className={`flex flex-col items-start justify-start text-left p-4 md:p-8 rounded-lg bg-white shadow-xl hover:bg-deep-purple group cursor-pointer text-dark-grey ${
               feature.width === 'two/thirds' ? 'col-span-2' : 'col-span-1'
             }`}
           >
@@ -44,7 +44,7 @@ export default function SectionWhyNext({
         ))}
       </div>
       <SolidButton
-        classes='bg-dark-grey text-white mt-4 py-4 px-12'
+        classes='cursor-pointer bg-dark-grey text-white mt-4 py-4 px-12'
         label="Let's Connect"
         href='contact'
       />
