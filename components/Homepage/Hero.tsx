@@ -26,7 +26,11 @@ export default function Hero({
           <p className='text-md md:text-xl font-light text-md py-4 pb-12 leading-8 md:leading-10'>
             {description}
           </p>
-          <BorderButton label="let's connect" href='contact' />
+          <BorderButton
+            label="let's connect"
+            href='contact'
+            classes='cursor-pointer'
+          />
         </div>
       </div>
     </main>
