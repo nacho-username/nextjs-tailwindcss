@@ -6,6 +6,7 @@ import CallToActionCardList from '../components/Homepage/CallToActionCardList'
 import SectionWhyNext from '../components/Homepage/SectionWhyNext'
 import SectionNextShowcase from '../components/Homepage/SectionNextShowcase'
 import SectionServices from '../components/Homepage/SectionServices'
+import SectionCaseStudy from '../components/Homepage/SectionCaseStudy'
 
 const Home = ({ data, error }: { data: any; error: any }) => {
   const { MetaDescription, MetaTitle } = data.MetaSeo[0]
@@ -39,6 +40,7 @@ const Home = ({ data, error }: { data: any; error: any }) => {
         serviceHeader={data.servicesWeOfferHeader}
         servicesList={data.servicesWeOffer}
       />
+      <SectionCaseStudy />
     </Layout>
   )
 }
