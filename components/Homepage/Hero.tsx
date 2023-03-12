@@ -29,7 +29,7 @@ export default function Hero({
           <BorderButton
             label="let's connect"
             href='contact'
-            classes='cursor-pointer'
+            classes='cursor-pointer py-3 px-6'
           />
         </div>
       </div>
