@@ -25,7 +25,7 @@ export default function SectionServices({
 }) {
   const { title, description } = serviceHeader
   return (
-    <section className='bg-beige text-center text-white pt-12 pb-12 md:pb-24'>
+    <section className='bg-beige text-center text-white pt-12 pb-12'>
       <Header
         title={title}
         description={description}
