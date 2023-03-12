@@ -15,8 +15,6 @@ interface BlogProps {
 }
 
 export default function index({ articleData }: BlogProps) {
-  // const { title, slug, datePosted } = articleData.data.attributes
-  console.log(articleData.data)
   return (
     <Layout
       meta={{

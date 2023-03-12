@@ -12,7 +12,6 @@ interface showcaseProps {
 }
 
 export default function DesktopShowcaseItem({ showcase }: showcaseProps) {
-  console.log('>>>>>', showcase)
   return (
     <div
       className={`relative flex flex-col my-4 md:my-0 items-start justify-start text-left bg-white   cursor-pointer ${

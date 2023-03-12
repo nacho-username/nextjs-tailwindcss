@@ -30,7 +30,7 @@ export default function BlogArticle({ article }: { article: ArticleProps }) {
           href='blog'
         />
         <img
-          className='w-full h-72 object-cover object-center'
+          className='w-full h-72 bg-fixed object-cover'
           src={`http://localhost:1337${articleImage}`}
           alt=''
         />
