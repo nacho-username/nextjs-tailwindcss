@@ -27,7 +27,7 @@ export default function SectionCaseStudy() {
           <BorderButton
             label='View Case Study'
             href='contact'
-            classes='text-teal-300 hover:text-slate-900 cursor-pointer'
+            classes='py-3 text-teal-300 hover:text-slate-900 cursor-pointer'
           />
         </div>
       </div>
