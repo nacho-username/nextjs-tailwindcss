@@ -38,7 +38,7 @@ export default function SectionNextShowcase({
             <div className='relative'>
               <Image
                 src={`http://localhost:1337${showcase.image.data.attributes.url}`}
-                alt={showcase.image.data.attributes.alternativeText}
+                alt=''
                 width={showcase.image.data.attributes.width}
                 height={showcase.image.data.attributes.height}
               />
