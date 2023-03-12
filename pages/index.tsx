@@ -7,9 +7,18 @@ import SectionWhyNext from '../components/Homepage/SectionWhyNext'
 import SectionNextShowcase from '../components/Homepage/SectionNextShowcase'
 import SectionServices from '../components/Homepage/SectionServices'
 import SectionCaseStudy from '../components/Homepage/SectionCaseStudy'
+import SectionArticleList from '../components/Homepage/SectionArticleList'
 
-const Home = ({ data, error }: { data: any; error: any }) => {
-  const { MetaDescription, MetaTitle } = data.MetaSeo[0]
+const Home = ({
+  homepageData,
+  articleData,
+  error,
+}: {
+  homepageData: any
+  articleData: any
+  error: any
+}) => {
+  const { MetaDescription, MetaTitle } = homepageData.MetaSeo[0]
 
   if (error) {
     return <div>Something went wrong</div>
@@ -22,38 +31,44 @@ const Home = ({ data, error }: { data: any; error: any }) => {
         description: MetaDescription,
       }}
     >
-      <Hero homepageData={data.hero} />
-      <WhoWeAreSection whoWeAreData={data.headerWhoWeAre} />
+      <Hero homepageData={homepageData.hero} />
+      <WhoWeAreSection whoWeAreData={homepageData.headerWhoWeAre} />
       <CallToActionCardList
-        showcaseCardData={data.showcaseCard}
-        connectCardData={data.connectCard}
+        showcaseCardData={homepageData.showcaseCard}
+        connectCardData={homepageData.connectCard}
       />
       <SectionWhyNext
-        whyNextHeader={data.headerWhyNext}
-        featureCards={data.NextFeatureCards}
+        whyNextHeader={homepageData.headerWhyNext}
+        featureCards={homepageData.NextFeatureCards}
       />
       <SectionNextShowcase
-        nextShowcaseHeader={data.portfolioHeaderNext}
-        nextShowcaseData={data.showcaseNext}
+        nextShowcaseHeader={homepageData.portfolioHeaderNext}
+        nextShowcaseData={homepageData.showcaseNext}
       />
       <SectionServices
-        serviceHeader={data.servicesWeOfferHeader}
-        servicesList={data.servicesWeOffer}
+        serviceHeader={homepageData.servicesWeOfferHeader}
+        servicesList={homepageData.servicesWeOffer}
       />
       <SectionCaseStudy />
+      <SectionArticleList articleData={articleData} />
     </Layout>
   )
 }
 
 export async function getServerSideProps() {
-  const res = await axios.get(
+  const getHomepageData = await axios.get(
     'http://localhost:1337/api/homepage?populate=deep'
   )
+  const getArticleData = await axios.get(
+    'http://localhost:1337/api/articles?populate=deep'
+  )
   try {
-    const homepage = res.data
+    const homepage = getHomepageData.data
+    const articles = getArticleData.data
     return {
       props: {
-        data: homepage.data.attributes,
+        homepageData: homepage.data.attributes,
+        articleData: articles.data,
       },
     }
   } catch (error: any) {
