@@ -1,5 +1,6 @@
 import Layout from '../components/Layout'
 import axios from 'axios'
+import { isMobile } from 'react-device-detect'
 import Hero from '../components/Homepage/Hero'
 import WhoWeAreSection from '../components/Homepage/SectionWhoWeAre'
 import CallToActionCardList from '../components/Homepage/CallToActionCardList'
@@ -32,7 +33,9 @@ const Home = ({
       }}
     >
       <Hero homepageData={homepageData.hero} />
-      <WhoWeAreSection whoWeAreData={homepageData.headerWhoWeAre} />
+      {!isMobile && (
+        <WhoWeAreSection whoWeAreData={homepageData.headerWhoWeAre} />
+      )}
       <CallToActionCardList
         showcaseCardData={homepageData.showcaseCard}
         connectCardData={homepageData.connectCard}
