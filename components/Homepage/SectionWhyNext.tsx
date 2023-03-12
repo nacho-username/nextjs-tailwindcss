@@ -20,13 +20,13 @@ export default function SectionWhyNext({
 }) {
   const { title, description } = whyNextHeader
   return (
-    <section className='bg-beige text-center px-16 text-deep-grey pt-2 pb-8'>
+    <section className='bg-beige text-center px-8 md:px-16 text-deep-grey pt-2 pb-8'>
       <div className='w-16 h-1 mx-auto border-0 bg-green-300 bg-gradient-to-r from-green-300 to-green-900 mb-4'></div>
       <h3 className='uppercase text-sm'>{title}</h3>
       <p className='w-[80%] md:w-2/3 mx-auto text-lg md:text-2xl font-medium pt-4 md:pt-8 leading-7 md:leading-10'>
         {description}
       </p>
-      <div className='container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 pt-8 md:py-16 '>
+      <div className='container mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-12 pt-8 md:py-16 '>
         {featureCards.map((feature, index) => (
           <div
             key={index}
