@@ -18,7 +18,7 @@ export default function ServiceItem({
   const { title, description } = serviceItem
   const { url, width, height } = serviceItem.icon.data.attributes
   return (
-    <div className='flex w-full p-12 justify-start items-start bg-white rounded-lg group hover:bg-dark-grey hover:border-white cursor-pointer'>
+    <div className='flex flex-wrap md:flex-nowrap w-full p-4 md:p-12 justify-start items-start bg-white rounded-lg group hover:bg-dark-grey hover:border-white cursor-pointer'>
       <div className='w-32'>
         <Image
           className='rounded-full'
