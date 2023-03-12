@@ -1,7 +1,7 @@
 import { title } from 'process'
 import Header from '../Shared/Header'
 import { SolidButton } from '../Shared/SolidButton'
-import NewsArticle from './Article'
+import Article from './Article'
 
 interface articleProps {
   title: string
@@ -27,7 +27,7 @@ export default function SectionArticleList({ articleData }: articleDataProps) {
       />
       <div className='container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 pt-8 pb-12'>
         {articleData.map((article: articleProps) => (
-          <NewsArticle key={article.slug} articleData={article} />
+          <Article key={article.slug} articleData={article} />
         ))}
       </div>
       <SolidButton

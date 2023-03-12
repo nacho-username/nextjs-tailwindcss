@@ -15,7 +15,7 @@ interface articleDataProps {
   articleData: articleProps[]
 }
 
-export default function NewsArticle({ articleData }: articleDataProps) {
+export default function Article({ articleData }: articleDataProps) {
   const { title, author, datePosted, slug, articleImage } =
     articleData.attributes
   const { url } = articleImage.data.attributes
