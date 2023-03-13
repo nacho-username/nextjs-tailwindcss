@@ -6,7 +6,7 @@ export default function Header() {
   const scrollDirection = useScrollDirection()
 
   return (
-    <nav className='flex items-center flex-wrap px-12 w-full sticky top-0 bg-deep-purple cursor-pointer'>
+    <nav className='flex items-center flex-wrap px-12 w-full sticky top-0 bg-deep-purple cursor-pointer z-20'>
       <Link href='/'>
         <div
           className={`py-4 px-2 -mb-20 inline-flex bg-deep-purple/30 rounded-lg md:mb-0 h-24 container mx-auto transition-all duration-300`}
