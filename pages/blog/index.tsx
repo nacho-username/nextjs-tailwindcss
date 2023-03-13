@@ -1,17 +1,11 @@
 import axios from 'axios'
 import Image from 'next/image'
 import Layout from '../../components/Layout'
-import { BorderButton } from '../../components/Shared/BorderButton'
 import Article from '../../components/Homepage/Article'
-import Link from 'next/link'
-
-interface Article {
-  title: string
-  slug: string
-}
+import { ArticleI } from '../../types'
 
 interface BlogProps {
-  articleData: Article[]
+  articleData: ArticleI[]
 }
 
 export default function index({ articleData }: BlogProps) {

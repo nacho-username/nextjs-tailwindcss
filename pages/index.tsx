@@ -9,14 +9,15 @@ import SectionNextShowcase from '../components/Homepage/SectionNextShowcase'
 import SectionServices from '../components/Homepage/SectionServices'
 import SectionCaseStudy from '../components/Homepage/SectionCaseStudy'
 import SectionArticleList from '../components/Homepage/SectionArticleList'
+import { ArticleI, StrapiArticleResponseI } from '../types'
 
 const Home = ({
   homepageData,
-  articleData,
+  articlesData,
   error,
 }: {
   homepageData: any
-  articleData: any
+  articlesData: ArticleI[]
   error: any
 }) => {
   const { MetaDescription, MetaTitle } = homepageData.MetaSeo[0]
@@ -53,7 +54,7 @@ const Home = ({
         servicesList={homepageData.servicesWeOffer}
       />
       <SectionCaseStudy />
-      <SectionArticleList articleData={articleData} />
+      <SectionArticleList articlesData={articlesData} />
     </Layout>
   )
 }
@@ -62,16 +63,17 @@ export async function getServerSideProps() {
   const getHomepageData = await axios.get(
     'http://localhost:1337/api/homepage?populate=deep'
   )
-  const getArticleData = await axios.get(
+  const getArticleData: StrapiArticleResponseI = await axios.get(
     'http://localhost:1337/api/articles?populate=deep'
   )
   try {
     const homepage = getHomepageData.data
     const articles = getArticleData.data
+
     return {
       props: {
         homepageData: homepage.data.attributes,
-        articleData: articles.data,
+        articlesData: articles.data,
       },
     }
   } catch (error: any) {

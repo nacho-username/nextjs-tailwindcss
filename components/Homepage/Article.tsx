@@ -1,23 +1,13 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import { ArticleI } from '../../types'
 import { formatDate } from '../../utils/helpers'
-import { SolidButton } from '../Shared/SolidButton'
-
-interface articleProps {
-  title: string
-  author: string
-  date: string
-  slug: string
-  image: string
+interface ArticleProps {
+  article: ArticleI
 }
 
-interface articleDataProps {
-  articleData: articleProps[]
-}
-
-export default function Article({ articleData }: articleDataProps) {
-  const { title, author, datePosted, slug, articleImage } =
-    articleData.attributes
+export default function Article({ article }: ArticleProps) {
+  const { title, author, datePosted, slug, articleImage } = article.attributes
   const { url } = articleImage.data.attributes
 
   return (
