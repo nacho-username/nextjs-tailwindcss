@@ -27,7 +27,7 @@ export default function CallToActionCardList({
 }) {
   return (
     <div className=' py-8 md:py-24 bg-beige'>
-      <div className='flex flex-wrap justify-center gap-4 px-4 md:px-0 md:gap-24 -mt-16 md:-mt-64'>
+      <div className='flex flex-wrap justify-center gap-4 px-4 md:px-0 md:gap-24 -mt-16 md:-mt-48'>
         <CallToActionCard
           backgroundColour={showcaseCardData.backgroundColour}
           headline={showcaseCardData.headline}
