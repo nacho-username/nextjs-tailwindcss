@@ -29,8 +29,11 @@ export default function BlogArticle({ article }: { article: ArticleProps }) {
           label='Back to All Articles'
           href='blog'
         />
+        <h1 className='text-6xl font-bold uppercase text-center mb-8 text-dark-grey'>
+          {title}
+        </h1>
         <img
-          className='w-full h-72 bg-fixed object-cover'
+          className='w-full h-96 bg-fixed object-cover rounded-xl'
           src={`http://localhost:1337${articleImage}`}
           alt=''
         />
@@ -44,9 +47,7 @@ export default function BlogArticle({ article }: { article: ArticleProps }) {
             {formatDate(datePosted)}
           </span>
         </p>
-        <h1 className='text-6xl font-bold uppercase mt-8 text-dark-grey'>
-          {title}
-        </h1>
+
         <div id='post-body' className='mt-4'>
           <ReactMarkdown>{content}</ReactMarkdown>
         </div>
