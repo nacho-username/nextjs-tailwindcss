@@ -5,10 +5,10 @@ import Article from '../../components/Homepage/Article'
 import { ArticleI } from '../../types'
 
 interface BlogProps {
-  articleData: ArticleI[]
+  articlesData: ArticleI[]
 }
 
-export default function index({ articleData }: BlogProps) {
+export default function index({ articlesData }: BlogProps) {
   return (
     <Layout
       meta={{
@@ -20,9 +20,9 @@ export default function index({ articleData }: BlogProps) {
         News Articles
       </h1>
       <section className='container mx-auto grid grid-cols-1 md:grid-cols-3 items-start md:gap-4 pt-8 md:pb-12'>
-        {articleData.data.map((article: any) => (
+        {articlesData.data.map((article: any) => (
           <div key={article.id} className=' text-white'>
-            <Article articleData={article} />
+            <Article article={article} />
           </div>
         ))}
       </section>
@@ -37,7 +37,7 @@ export async function getServerSideProps() {
     )
     return {
       props: {
-        articleData: articles.data,
+        articlesData: articles.data,
       },
     }
   } catch (error: any) {
