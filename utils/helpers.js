@@ -12,3 +12,11 @@ export function formatDate(dateString) {
   // Format the date using the formatter
   return dateFormatter.format(date) // "Mar 30, 2023"
 }
+
+export const sortArticlesByDatePosted = (articles) => {
+  return articles.sort((a, b) => b.datePosted - a.datePosted)
+}
+
+export const limitByNumber = (array, n) => {
+  return array.slice(0, n)
+}
