@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
+import { checkIfContactPage } from '../../utils/helpers'
 import { useScrollDirection } from '../../utils/scrollHook'
 
 export default function Header() {
@@ -12,10 +13,14 @@ export default function Header() {
   }
 
   return (
-    <nav className='flex items-center flex-wrap px-2 md:px-12 w-full sticky top-0 bg-deep-purple cursor-pointer z-20'>
+    <nav
+      className={`flex items-center flex-wrap px-2 md:px-12 w-full sticky top-0 ${
+        checkIfContactPage() ? '' : 'bg-deep-purple'
+      } cursor-pointer z-20`}
+    >
       <Link href='/'>
         <div
-          className={`py-4 px-2 -mb-20 inline-flex bg-deep-purple/30 rounded-lg md:mb-0 h-24 container mx-auto transition-all duration-300`}
+          className={`py-4 px-2 -mb-20 inline-flex  md:mb-0 h-24 container mx-auto transition-all duration-300`}
         >
           <Image
             className='pb-2'
@@ -48,7 +53,7 @@ export default function Header() {
       <div
         className={`${
           active ? '' : 'hidden'
-        } absolute top-16 md:top-4 right-0 bg-opacity-80 w-full rounded-lg bg-deep-purple pl-12 pr-2 text-right py-2 md:inline-flex md:flex-grow md:w-auto`}
+        } absolute top-16 md:top-4 right-0 bg-opacity-80 w-full rounded-lg pl-12 pr-2 text-right py-2 md:inline-flex md:flex-grow md:w-auto`}
       >
         <div className='md:inline-flex md:flex-row md:ml-auto md:w-auto md:items-center text-right flex flex-col md:h-auto'>
           <Link
