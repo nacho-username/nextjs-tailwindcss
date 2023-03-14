@@ -36,7 +36,6 @@ export default function ContactPage() {
         message: 'Please enter a valid email',
       },
     },
-    message: { required: 'Please enter a valid message', minLength: 10 },
   }
 
   async function onSubmitForm(formData: FormData) {
@@ -46,6 +45,8 @@ export default function ContactPage() {
       const res = await axios.post('/api/send-contact-email', formData)
       console.log(res)
       setSuccessMessage(res.data.message)
+
+      reset()
     } catch (error) {}
   }
   return (
@@ -67,7 +68,7 @@ export default function ContactPage() {
             Contact Us
           </h1>
         </div>
-        <section>
+        <section className='bg-dark-grey pb-32'>
           <div className='container mx-auto flex flew-wrap w-full justify-between gap-24'>
             <div className='w-1/2 bg-zinc-900 p-8 rounded-xl'>
               <h2 className='text-4xl text-white font-bold'>Contact form</h2>
@@ -133,10 +134,10 @@ export default function ContactPage() {
                   </label>
                   <textarea
                     id='message'
-                    {...register('message', contactFormOptions.message)}
+                    {...register('message')}
                     rows={4}
                     className='block p-2.5 w-full text-sm text-white border bg-zinc-900 border-zinc-600 rounded-md focus:ring-teal-300 focus:border-teal-300 focus:outline-none focus:ring'
-                    placeholder='Describe how we can assist you...'
+                    placeholder='How we can help...'
                   />
                   {errors?.message && (
                     <p className='text-xs italic text-red-400'>
@@ -144,12 +145,17 @@ export default function ContactPage() {
                     </p>
                   )}
                 </div>
+                {successMessage && (
+                  <p className='text-teal-300 font-light italic mt-2 mb-4'>
+                    {successMessage}
+                  </p>
+                )}
                 <button
                   type='submit'
                   className='text-dark-grey hover:text-white bg-teal-300 hover:bg-dark-grey font-medium rounded-lg text-sm px-5 py-2.5 text-center '
                   disabled={isSubmitting}
                 >
-                  Register new account
+                  Submit your request
                 </button>
               </form>
             </div>
