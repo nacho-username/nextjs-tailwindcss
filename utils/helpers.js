@@ -1,3 +1,6 @@
+/* eslint-disable react-hooks/rules-of-hooks */
+import { useRouter } from 'next/router'
+
 export function formatDate(dateString) {
   // Create a date object
   let date = new Date(dateString)
@@ -19,4 +22,9 @@ export const sortArticlesByDatePosted = (articles) => {
 
 export const limitByNumber = (array, n) => {
   return array.slice(0, n)
+}
+
+export const checkIfContactPage = () => {
+  const router = useRouter()
+  return router.pathname === '/contact'
 }
