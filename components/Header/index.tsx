@@ -1,12 +1,18 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import { useState } from 'react'
 import { useScrollDirection } from '../../utils/scrollHook'
 
 export default function Header() {
-  const scrollDirection = useScrollDirection()
+  // const scrollDirection = useScrollDirection()
+  const [active, setActive] = useState(false)
+
+  const handleClick = () => {
+    setActive(!active)
+  }
 
   return (
-    <nav className='flex items-center flex-wrap px-12 w-full sticky top-0 bg-deep-purple cursor-pointer z-20'>
+    <nav className='flex items-center flex-wrap px-2 md:px-12 w-full sticky top-0 bg-deep-purple cursor-pointer z-20'>
       <Link href='/'>
         <div
           className={`py-4 px-2 -mb-20 inline-flex bg-deep-purple/30 rounded-lg md:mb-0 h-24 container mx-auto transition-all duration-300`}
@@ -20,7 +26,10 @@ export default function Header() {
           />
         </div>
       </Link>
-      <button className='inline-flex md:hidden p-3 hover:bg-green-600 rounded lg:hidden text-white ml-auto hover:text-white outline-none'>
+      <button
+        onClick={handleClick}
+        className='inline-flex md:hidden p-3 hover:bg-green-600 rounded lg:hidden text-white ml-auto hover:text-white outline-none'
+      >
         <svg
           className='w-6 h-6'
           fill='none'
@@ -36,8 +45,12 @@ export default function Header() {
           />
         </svg>
       </button>
-      <div className='hidden w-full md:inline-flex md:flex-grow md:w-auto'>
-        <div className='md:inline-flex md:flex-row md:ml-auto md:w-auto w-full md:items-center items-start flex flex-col md:h-auto'>
+      <div
+        className={`${
+          active ? '' : 'hidden'
+        } absolute top-16 md:top-4 right-0 bg-opacity-80 w-full rounded-lg bg-deep-purple pl-12 pr-2 text-right py-2 md:inline-flex md:flex-grow md:w-auto`}
+      >
+        <div className='md:inline-flex md:flex-row md:ml-auto md:w-auto md:items-center text-right flex flex-col md:h-auto'>
           <Link
             href='/'
             className='md:inline-flex md:w-auto w-full px-3 py-2 rounded text-white font-light items-center justify-center hover:bg-green-600 hover:text-teal-300'
