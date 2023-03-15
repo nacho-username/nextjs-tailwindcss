@@ -8,9 +8,10 @@ export default async function (req: any, res: any) {
     const { name, email, phone, message } = req.body
     const response = await client.sendEmailWithTemplate({
       From: process.env.POSTMARK_FROM_EMAIL,
-      To: process.env.POSTMARK_TO_ADDRESS,
+      To: email,
+      Bcc: process.env.POSTMARK_TO_ADDRESS,
       ReplyTo: email,
-      TemplateId: 31073802,
+      TemplateId: 31079077,
       TemplateModel: {
         name,
         email,
