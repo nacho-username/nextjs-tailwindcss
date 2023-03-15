@@ -21,7 +21,7 @@ export default function CallToActionCard({
   if (backgroundColour === 'solid') {
     return (
       <div className='h-auto md:min-h-[500px] rounded-xl pt-8 px-4 md:px-12 w-full sm:w-[45%] md:mx-0 md:w-1/3 overflow-hidden shadow-2xl bg-dark-grey'>
-        <div className='flex flex-col items-start text-white gap-2 md:gap-4'>
+        <div className='flex flex-col items-center md:items-start text-white gap-2 md:gap-4'>
           <h4 className='text-xs md:text-sm font-light uppercase'>
             {subHeading}
           </h4>
@@ -50,7 +50,7 @@ export default function CallToActionCard({
   if (backgroundColour === 'gradient') {
     return (
       <div className='h-auto md:min-h-[500px] rounded-xl pt-8 px-4 md:px-12 w-full sm:w-[45%] md:mx-0 md:w-1/3 overflow-hidden shadow-2xl bg-gradient-to-tl from-teal-400 to-teal-700'>
-        <div className='flex flex-col items-start text-white gap-2 md:gap-4'>
+        <div className='flex flex-col items-center md:items-start text-white gap-2 md:gap-4'>
           <h4 className='text-xs md:text-sm font-light uppercase'>
             {subHeading}
           </h4>
