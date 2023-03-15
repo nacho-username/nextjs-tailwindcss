@@ -58,25 +58,27 @@ export default function ContactPage() {
           'Have a project in mind? We love collaborating on new project ideas!',
       }}
     >
-      <main className='bg-dark-grey -z-20'>
+      <main className='bg-dark-grey-z-10'>
         <Image
-          className='absolute top-0 w-full -z-10 '
+          className='absolute top-0 w-full -z-10'
           src='/images/keyboard.jpg'
           alt='keyboard'
           width={600}
           height={400}
         />
 
-        <div className='flex justify-center items-center mt-36 '>
-          <h1 className='container mx-auto text-6xl font-bold text-white text-center'>
+        <div className='flex justify-center items-center mt-8 md:mt-36 mb-2 z-10'>
+          <h1 className='container mx-auto text-4xl md:text-6xl font-bold text-white text-center'>
             Contact Us
           </h1>
         </div>
-        <section className='bg-dark-grey pt-12 pb-32 mt-36'>
-          <div className='container mx-auto flex flew-wrap w-full justify-between gap-24'>
-            <div className='w-1/2 bg-zinc-900 p-8 rounded-xl'>
-              <h2 className='text-4xl text-white font-bold'>Get in touch</h2>
-              <p className='text-md font-extralight text-white w-[80%] my-2'>
+        <section className='bg-dark-grey pt-12 pb-8 md:pb-32 mt-12 md:mt-36'>
+          <div className='container mx-auto flex flex-wrap w-full justify-between md:gap-24 px-8 md:px-0'>
+            <div className='md:w-[45%] bg-zinc-900 p-8 rounded-xl'>
+              <h2 className='text-xl md:text-4xl text-white font-bold text-center md:text-left'>
+                Get in touch
+              </h2>
+              <p className='text-xs md:text-md font-extralight text-white w-full md:w-[80%] my-2 text-center md:text-left'>
                 We will never use your contact information for marketing
                 purposes
               </p>
@@ -154,25 +156,27 @@ export default function ContactPage() {
                     {successMessage}
                   </p>
                 )}
-                <button
-                  type='submit'
-                  className='text-dark-grey hover:text-white bg-teal-300 hover:bg-dark-grey font-medium rounded-lg text-sm px-5 py-2.5 text-center '
-                  disabled={isSubmitting}
-                >
-                  Submit your request
-                </button>
+                <div className='w-full text-center md:text-left'>
+                  <button
+                    type='submit'
+                    className='text-dark-grey hover:text-white bg-teal-300 hover:bg-dark-grey font-medium rounded-lg text-sm px-5 py-2.5 text-center '
+                    disabled={isSubmitting}
+                  >
+                    Submit your request
+                  </button>
+                </div>
               </form>
             </div>
-            <div className='w-1/2'>
-              <h2 className='text-4xl  text-white font-bold'>
+            <div className='md:w-[45%]'>
+              <h2 className='text-xl md:text-4xl mt-8 md:mt-0 text-center md:text-left text-white font-bold'>
                 Have a project in mind?
               </h2>
-              <p className='text-2xl font-extralight text-white w-[80%] my-8 leading-10'>
+              <p className='text-md md:text-2xl font-extralight text-center md:text-left text-white w-full md:w-[80%] my-4 md:my-8 leading-10'>
                 We love collaborating on new and innovative ideas. Get in touch
                 with us and let’s build something great!
               </p>
-              <div className='mt-10'>
-                <div className='flex items-center my-6'>
+              <div className='mt-4 md:mt-10 w-full'>
+                <div className='flex justify-center md:justify-start items-center my-6'>
                   <img
                     className='inline-block'
                     width={36}
@@ -180,13 +184,13 @@ export default function ContactPage() {
                     alt=''
                   />
                   <a
-                    className='text-2xl text-teal-300 font-medium ml-2 cursor-pointer hover:underline'
+                    className='text-md md:text-2xl text-teal-300 font-medium ml-2 cursor-pointer hover:underline'
                     href='mailto:hello@waterfalldigital.co.za'
                   >
                     hello@waterfalldigital.co.za
                   </a>
                 </div>
-                <div className='flex items-center my-6'>
+                <div className='flex justify-center md:justify-start items-center my-6'>
                   <img
                     className='inline-block'
                     width={34}
@@ -194,7 +198,7 @@ export default function ContactPage() {
                     alt=''
                   />
                   <a
-                    className='text-2xl text-teal-300 font-medium ml-2 cursor-pointer hover:underline'
+                    className='text-md md:text-2xl text-teal-300 font-medium ml-2 cursor-pointer hover:underline'
                     href='tel:+27632030752'
                   >
                     +27(0) 63 203 0752
