@@ -26,7 +26,7 @@ export default function Header({
         {title}
       </h3>
       <p
-        className={`w-[80%] text-lg md:text-3xl font-bold leading-7 md:leading-10 ${
+        className={`w-[80%] text-lg my-4 md:my-0 md:text-3xl font-bold leading-7 md:leading-10 ${
           dark ? 'text-dark-grey' : 'text-white'
         }`}
       >
