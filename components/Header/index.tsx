@@ -3,14 +3,11 @@ import Link from 'next/link'
 import { useState } from 'react'
 import { checkIfContactPage } from '../../utils/helpers'
 import { useScrollDirection } from '../../utils/scrollHook'
+import Sidebar from './Sidebar'
 
 export default function Header() {
   // const scrollDirection = useScrollDirection()
   const [active, setActive] = useState(false)
-
-  const handleClick = () => {
-    setActive(!active)
-  }
 
   return (
     <nav
@@ -31,31 +28,12 @@ export default function Header() {
           />
         </div>
       </Link>
-      <button
-        onClick={handleClick}
-        className='inline-flex md:hidden p-3 hover:bg-green-600 rounded lg:hidden text-white ml-auto hover:text-white outline-none'
-      >
-        <svg
-          className='w-6 h-6'
-          fill='none'
-          stroke='currentColor'
-          viewBox='0 0 24 24'
-          xmlns='http://www.w3.org/2000/svg'
-        >
-          <path
-            strokeLinecap='round'
-            strokeLinejoin='round'
-            strokeWidth={2}
-            d='M4 6h16M4 12h16M4 18h16'
-          />
-        </svg>
-      </button>
+
       <div
-        className={`${
-          active ? '' : 'hidden'
-        } bg-opacity-80 w-full rounded-lg pl-12 pr-2 text-right py-2 md:inline-flex md:flex-grow md:w-auto`}
+        className={`bg-opacity-80 w-full rounded-lg pl-12 pr-2 text-right py-2 md:inline-flex md:flex-grow md:w-auto`}
       >
-        <div className='md:inline-flex md:flex-row md:ml-auto md:w-auto md:items-center text-right flex flex-col md:h-auto'>
+        <Sidebar />
+        <div className='hidden md:inline-flex md:flex-row md:ml-auto md:w-auto md:items-center text-right md:h-auto'>
           <Link
             href='/'
             className='md:inline-flex md:w-auto w-full px-3 py-2 rounded text-white font-light items-center justify-center hover:bg-green-600 hover:text-teal-300'
