@@ -9,7 +9,7 @@ export default function Sidebar() {
       {!isOpen ? (
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className='md:hidden fixed top-4 right-3 text-white'
+          className='md:hidden fixed top-8 right-3 text-white'
         >
           <svg
             className='w-6 h-6'
@@ -29,7 +29,7 @@ export default function Sidebar() {
       ) : (
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className='text-xl font-bold text-white fixed top-4 right-4 z-10'
+          className='text-xl font-bold text-white fixed top-8 right-4 z-10'
         >
           X
         </button>
