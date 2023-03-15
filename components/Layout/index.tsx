@@ -23,7 +23,7 @@ export default function Layout({
         <meta name='description' content={description} />
         <link rel='icon' href={icon || '/favicon.ico'} />
       </Head>
-      <main className='flex flex-col content-between h-full'>
+      <main className='flex flex-col content-between h-full bg-dark-grey'>
         <Header />
         {children}
         <Footer />
