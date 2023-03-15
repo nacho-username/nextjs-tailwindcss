@@ -5,9 +5,8 @@ import { checkIfContactPage } from '../../utils/helpers'
 export default function Footer() {
   return (
     <footer
-      className={`${
-        checkIfContactPage() ? 'bg-dark-grey' : 'bg-deep-purple'
-      } text-white py-12 px-4 md:px-8`}
+      className='bg-dark-grey
+       text-white py-12 px-4 md:px-8 z-10'
     >
       <div className='container mx-auto flex flex-wrap justify-between'>
         <div className='w-full md:w-1/3 mb-8 md:mb-0 flex flex-col items-start'>
