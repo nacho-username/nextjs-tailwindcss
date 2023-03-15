@@ -2,6 +2,7 @@ import Layout from '../components/Layout'
 import { useForm } from 'react-hook-form'
 import { useState } from 'react'
 import axios from 'axios'
+import Image from 'next/image'
 
 type FormData = {
   name: string
@@ -57,21 +58,24 @@ export default function ContactPage() {
           'Have a project in mind? We love collaborating on new project ideas!',
       }}
     >
-      <main
-        style={{
-          backgroundImage: `url(http://localhost:3000/images/keyboard.jpg)`,
-        }}
-        className='absolute top-0 bg-no-repeat bg-[length:600px_400px] md:bg-cover md:bg-center w-full h-screen'
-      >
-        <div className='flex justify-center items-center h-2/3'>
+      <main>
+        <Image
+          className='absolute top-0 w-full -z-10 '
+          src='/images/keyboard.jpg'
+          alt='keyboard'
+          width={600}
+          height={400}
+        />
+
+        <div className='flex justify-center items-center mt-36 '>
           <h1 className='container mx-auto text-6xl font-bold text-white text-center'>
             Contact Us
           </h1>
         </div>
-        <section className='bg-dark-grey pb-32'>
+        <section className='bg-dark-grey pt-12 pb-32 mt-36'>
           <div className='container mx-auto flex flew-wrap w-full justify-between gap-24'>
             <div className='w-1/2 bg-zinc-900 p-8 rounded-xl'>
-              <h2 className='text-4xl text-white font-bold'>Contact form</h2>
+              <h2 className='text-4xl text-white font-bold'>Get in touch</h2>
               <p className='text-md font-extralight text-white w-[80%] my-2'>
                 We will never use your contact information for marketing
                 purposes
@@ -79,7 +83,7 @@ export default function ContactPage() {
               <form onSubmit={handleSubmit(onSubmitForm, handleError)}>
                 <div className='my-4'>
                   <label className=' text-zinc-300 text-xs' htmlFor='name'>
-                    Name
+                    Fullname
                   </label>
                   <input
                     id='name'
@@ -160,13 +164,43 @@ export default function ContactPage() {
               </form>
             </div>
             <div className='w-1/2'>
-              <h2 className='text-4xl mt-8 text-white font-bold'>
+              <h2 className='text-4xl  text-white font-bold'>
                 Have a project in mind?
               </h2>
-              <p className='text-2xl font-extralight text-white w-[80%] my-2'>
+              <p className='text-2xl font-extralight text-white w-[80%] my-8 leading-10'>
                 We love collaborating on new and innovative ideas. Get in touch
                 with us and let’s build something great!
               </p>
+              <div className='mt-10'>
+                <div className='flex items-center my-6'>
+                  <img
+                    className='inline-block'
+                    width={36}
+                    src='/images/email-icon.svg'
+                    alt=''
+                  />
+                  <a
+                    className='text-2xl text-teal-300 font-medium ml-2 cursor-pointer hover:underline'
+                    href='mailto:hello@waterfalldigital.co.za'
+                  >
+                    hello@waterfalldigital.co.za
+                  </a>
+                </div>
+                <div className='flex items-center my-6'>
+                  <img
+                    className='inline-block'
+                    width={34}
+                    src='/images/smartphone-icon.svg'
+                    alt=''
+                  />
+                  <a
+                    className='text-2xl text-teal-300 font-medium ml-2 cursor-pointer hover:underline'
+                    href='tel:+27632030752'
+                  >
+                    +27(0) 63 203 0752
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </section>
