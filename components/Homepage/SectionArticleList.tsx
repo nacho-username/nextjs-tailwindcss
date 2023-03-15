@@ -19,7 +19,7 @@ export default function SectionArticleList({ articlesData }: ArticleListProps) {
   const latestArticles = limitByNumber(sortedArticles, 3)
 
   return (
-    <section className='py-8 md:py-16 px-4 text-center'>
+    <section className='py-12 md:py-16 px-8 md:px-4 text-center'>
       <Header
         title='Stay Updated'
         description='Recent News'
