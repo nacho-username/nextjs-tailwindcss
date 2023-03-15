@@ -18,7 +18,7 @@ export default function SectionCaseStudy() {
           <Header
             title='case study'
             description='Fibre Phoenix'
-            classes='items-center'
+            classes='items-center md:items-start'
           />
           <p className='text-md font-light leading-8 text-white py-4 mb-8'>
             Discover how the Fibre Phoenix web application helped customers find
