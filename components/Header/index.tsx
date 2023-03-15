@@ -53,7 +53,7 @@ export default function Header() {
       <div
         className={`${
           active ? '' : 'hidden'
-        } absolute top-16 md:top-4 right-0 bg-opacity-80 w-full rounded-lg pl-12 pr-2 text-right py-2 md:inline-flex md:flex-grow md:w-auto`}
+        } bg-opacity-80 w-full rounded-lg pl-12 pr-2 text-right py-2 md:inline-flex md:flex-grow md:w-auto`}
       >
         <div className='md:inline-flex md:flex-row md:ml-auto md:w-auto md:items-center text-right flex flex-col md:h-auto'>
           <Link
@@ -62,12 +62,12 @@ export default function Header() {
           >
             Home
           </Link>
-          <Link
+          {/* <Link
             href='/our-work'
             className='md:inline-flex md:w-auto w-full px-3 py-2 rounded text-white font-light items-center justify-center hover:bg-green-600 hover:text-teal-300'
           >
             Our Work
-          </Link>
+          </Link> */}
           <Link
             href='/blog'
             className='md:inline-flex md:w-auto w-full px-3 py-2 rounded text-white font-light items-center justify-center hover:bg-green-600 hover:text-teal-300'
