@@ -30,7 +30,7 @@ export default function Header() {
       </Link>
 
       <div
-        className={`bg-opacity-80 w-full rounded-lg pl-12 pr-2 text-right py-2 md:inline-flex md:flex-grow md:w-auto`}
+        className={`w-full text-right md:py-2 md:inline-flex md:flex-grow md:w-auto`}
       >
         <Sidebar />
         <div className='hidden md:inline-flex md:flex-row md:ml-auto md:w-auto md:items-center text-right md:h-auto'>
