@@ -1,20 +1,11 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { useState } from 'react'
 import { checkIfContactPage } from '../../utils/helpers'
-import { useScrollDirection } from '../../utils/scrollHook'
 import Sidebar from './Sidebar'
 
 export default function Header() {
-  // const scrollDirection = useScrollDirection()
-  const [active, setActive] = useState(false)
-
   return (
-    <nav
-      className={`flex items-center flex-wrap px-2 md:px-12 w-full sticky top-0 ${
-        checkIfContactPage() ? '' : 'bg-deep-purple'
-      } cursor-pointer z-20`}
-    >
+    <nav className='flex items-center flex-wrap px-2 md:px-12 w-full sticky top-0 bg-dark-grey bg-opacity-90 backdrop-blur-sm cursor-pointer z-20'>
       <Link href='/'>
         <div
           className={`py-4 px-2 -mb-20 inline-flex  md:mb-0 h-24 container mx-auto transition-all duration-300`}
