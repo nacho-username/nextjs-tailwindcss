@@ -1,9 +1,14 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from 'next/link'
+import { checkIfContactPage } from '../../utils/helpers'
 
 export default function Footer() {
   return (
-    <footer className='bg-deep-purple text-white py-12 px-8'>
+    <footer
+      className={`${
+        checkIfContactPage() ? 'bg-dark-grey' : 'bg-deep-purple'
+      } text-white py-12 px-8`}
+    >
       <div className='container mx-auto flex flex-wrap justify-between'>
         <div className='w-1/3 flex flex-col items-start'>
           <img src='/images/logo.svg' alt='Logo' className='w-16 h-16 mb-2' />
