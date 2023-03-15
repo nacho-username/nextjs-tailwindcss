@@ -58,7 +58,7 @@ export default function ContactPage() {
           'Have a project in mind? We love collaborating on new project ideas!',
       }}
     >
-      <main>
+      <main className='bg-dark-grey -z-20'>
         <Image
           className='absolute top-0 w-full -z-10 '
           src='/images/keyboard.jpg'
