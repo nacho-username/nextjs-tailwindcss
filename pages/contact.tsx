@@ -58,16 +58,16 @@ export default function ContactPage() {
           'Have a project in mind? We love collaborating on new project ideas!',
       }}
     >
-      <main className='bg-dark-grey-z-10'>
+      <main className='z-10'>
         <Image
-          className='absolute top-0 w-full -z-10'
+          className='fixed top-0 w-full -z-10'
           src='/images/keyboard.jpg'
           alt='keyboard'
           width={600}
           height={400}
         />
 
-        <div className='flex justify-center items-center mt-8 md:mt-36 mb-2 z-10'>
+        <div className='flex justify-center items-center mt-8 md:mt-36 mb-2'>
           <h1 className='container mx-auto text-4xl md:text-6xl font-bold text-white text-center'>
             Contact Us
           </h1>
