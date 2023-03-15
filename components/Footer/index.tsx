@@ -49,9 +49,9 @@ export default function Footer() {
               </Link>
               <Link
                 className='hover:text-teal-300 cursor-pointer'
-                href='/our-work'
+                href='/#case-study'
               >
-                Work
+                Case Study
               </Link>
             </div>
             <div className='flex flex-col my-2 w-32 gap-4'>
