@@ -5,18 +5,21 @@ import Header from '../Shared/Header'
 export default function SectionCaseStudy() {
   return (
     <section id='case-study'>
-      <div className="flex flex-wrap h-screen bg-deep-purple min-h-900 py-12 md:py-24 justify-center items-center p-4 bg-[url('/images/fibre-phoenix-case-study-bird.svg')] bg-fixed bg-no-repeat bg-right">
+      <div className="flex flex-wrap h-full bg-deep-purple min-h-900 py-12 md:py-24 justify-center items-center p-4 bg-[url('/images/fibre-phoenix-case-study-bird.svg')] bg-fixed bg-no-repeat bg-right">
         <div className='md:w-5/12'>
           <Image
             src={'/images/fibre-phoenix-case-study.png'}
             width={600}
             height={600}
             alt='Fibre Phoenix Case Study'
-            className=''
           />
         </div>
-        <div className='md:w-4/12 self-center text-left py-8'>
-          <Header title='case study' description='Fibre Phoenix' />
+        <div className='md:w-4/12 self-center text-center md:text-left py-8'>
+          <Header
+            title='case study'
+            description='Fibre Phoenix'
+            classes='items-center'
+          />
           <p className='text-md font-light leading-8 text-white py-4 mb-8'>
             Discover how the Fibre Phoenix web application helped customers find
             the best deals for fibre internet connections. Learn how our web
