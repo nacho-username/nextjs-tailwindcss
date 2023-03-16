@@ -24,7 +24,7 @@ export default function Article({ article }: ArticleProps) {
           className='rounded-xl w-full'
         />
         <div className='opacity-0 group-hover:opacity-100 duration-300 absolute top-0 right-0 bottom-0 left-0 ease-in-out flex justify-center items-center from-deep-purple/70 to-deep-purple/70 bg-gradient-to-t rounded-xl'>
-          <img src='/images/search-icon.svg' alt='' />
+          <Image src='/images/search-icon.svg' width={20} height={20} alt='' />
         </div>
       </div>
 
