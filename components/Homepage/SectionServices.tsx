@@ -32,7 +32,7 @@ export default function SectionServices({
         dark={true}
         alignment='center'
       />
-      <div className='container mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 py-12 px-8 md:px-24'>
+      <div className='container mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 py-4 md:py-12 px-8 md:px-24'>
         {servicesList.map((service, index) => (
           <ServiceItem key={index} serviceItem={service} />
         ))}
