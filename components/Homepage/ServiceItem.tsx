@@ -1,22 +1,13 @@
 import Image from 'next/image'
+import { ServiceI } from '../../types'
 
-interface serviceItemProps {
-  title: string
-  description: string
-  icon: {
-    url: string
-    width: number
-    height: number
-  }
+interface ServiceProps {
+  service: ServiceI
 }
 
-export default function ServiceItem({
-  serviceItem,
-}: {
-  serviceItem: serviceItemProps
-}) {
-  const { title, description } = serviceItem
-  const { url, width, height } = serviceItem.icon.data.attributes
+export default function ServiceItem({ service }: ServiceProps) {
+  const { title, description } = service
+  const { url, width, height } = service.icon.data.attributes
   return (
     <div className='flex flex-wrap md:flex-nowrap w-full p-4 md:p-12 justify-start items-start bg-white rounded-lg group hover:bg-dark-grey hover:border-white cursor-pointer'>
       <div className='w-32'>
