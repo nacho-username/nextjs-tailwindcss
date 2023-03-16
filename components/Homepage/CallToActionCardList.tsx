@@ -26,7 +26,7 @@ export default function CallToActionCardList({
   connectCardData: connectCardData
 }) {
   return (
-    <div className=' py-8 md:py-24 bg-beige'>
+    <div className=' pt-8 pb-16 md:py-24 bg-beige'>
       <div className='flex flex-wrap justify-center gap-8 px-6 md:px-0 md:gap-24 -mt-24 md:-mt-48'>
         <CallToActionCard
           backgroundColour={showcaseCardData.backgroundColour}
