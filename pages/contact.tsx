@@ -177,11 +177,12 @@ export default function ContactPage() {
               </p>
               <div className='mt-4 md:mt-10 w-full'>
                 <div className='flex justify-center md:justify-start items-center my-6'>
-                  <img
-                    className='inline-block'
-                    width={36}
+                  <Image
                     src='/images/email-icon.svg'
-                    alt=''
+                    width={36}
+                    height={36}
+                    alt='Email Icon'
+                    className='inline-block'
                   />
                   <a
                     className='text-md md:text-2xl text-teal-300 font-medium ml-2 cursor-pointer hover:underline'
@@ -191,11 +192,12 @@ export default function ContactPage() {
                   </a>
                 </div>
                 <div className='flex justify-center md:justify-start items-center my-6'>
-                  <img
-                    className='inline-block'
-                    width={34}
+                  <Image
                     src='/images/smartphone-icon.svg'
-                    alt=''
+                    width={36}
+                    height={36}
+                    alt='Smartphone Icon'
+                    className='inline-block'
                   />
                   <a
                     className='text-md md:text-2xl text-teal-300 font-medium ml-2 cursor-pointer hover:underline'
