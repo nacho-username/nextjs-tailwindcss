@@ -35,13 +35,13 @@ export default function SectionNextShowcase({
       </h3>
       <div className='container mx-auto grid grid-cols-1 md:grid-cols-4 md:gap-4 pt-8 md:pb-12'>
         {nextShowcaseData.map((showcase, index) => (
-          <>
+          <div key={showcase.websiteLink}>
             {isMobile ? (
-              <MobileShowcase key={index} showcase={showcase} />
+              <MobileShowcase showcase={showcase} />
             ) : (
-              <DesktopShowcase key={index} showcase={showcase} />
+              <DesktopShowcase showcase={showcase} />
             )}
-          </>
+          </div>
         ))}
       </div>
     </section>
