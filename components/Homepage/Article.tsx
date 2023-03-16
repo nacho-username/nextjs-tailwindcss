@@ -28,17 +28,17 @@ export default function Article({ article }: ArticleProps) {
         </div>
       </div>
 
-      <h4 className='text-sm text-gray-400'>
-        Author:
+      <h4 className='text-xs md:text-sm text-gray-400'>
+        Posted by:
         <span className='text-bold text-dark-grey'>Murray Williams</span>
       </h4>
-      <p className='text-sm text-gray-400'>
-        Posted:
+      <p className='text-xs md:text-sm text-gray-400'>
+        Posted on:
         <span className='text-bold text-dark-grey'>
           {formatDate(datePosted)}
         </span>
       </p>
-      <h2 className='mt-2 text-xl font-bold text-dark-grey leading-6 text-left'>
+      <h2 className='mt-2 text-lg md:text-xl font-bold text-dark-grey leading-6 text-left'>
         {title}
       </h2>
     </Link>
