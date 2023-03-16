@@ -29,8 +29,10 @@ export default function ServiceItem({
         />
       </div>
       <div className='text-left ml-4 text-dark-grey group-hover:text-white'>
-        <h4 className='text-xl font-bold uppercase '>{title}</h4>
-        <p className='text-sm pt-2 leading-5 font-light'>{description}</p>
+        <h4 className='text-lg md:text-xl font-bold uppercase '>{title}</h4>
+        <p className='text-xs md:text-sm pt-2 leading-5 font-light'>
+          {description}
+        </p>
       </div>
     </div>
   )
