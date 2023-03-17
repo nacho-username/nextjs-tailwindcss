@@ -3,6 +3,7 @@ export interface ArticleI {
   data: {
     attributes: {
       title: string
+      slug: string
       author: string
       datePosted: string
       content: string
