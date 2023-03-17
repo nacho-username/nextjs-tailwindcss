@@ -1,4 +1,11 @@
 export interface ArticleI {
+  attributes: {
+    title: string
+      slug: string
+      author: string
+      datePosted: string
+      content: string
+      articleImage: ArticleImageI
   id: number
   data: {
     attributes: {
