@@ -13,11 +13,7 @@ interface showcaseProps {
 
 export default function DesktopShowcaseItem({ showcase }: showcaseProps) {
   return (
-    <div
-      className={`relative flex flex-col my-4 md:my-0 items-start justify-start text-left bg-white   cursor-pointer ${
-        showcase.width === 'two/thirds' ? 'col-span-2' : 'col-span-1'
-      }`}
-    >
+    <>
       <Image
         src={`http://localhost:1337${showcase.image.data.attributes.url}`}
         alt=''
@@ -36,6 +32,6 @@ export default function DesktopShowcaseItem({ showcase }: showcaseProps) {
           href={showcase.websiteLink}
         />
       </div>
-    </div>
+    </>
   )
 }
