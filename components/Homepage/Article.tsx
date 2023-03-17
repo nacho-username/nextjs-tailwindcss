@@ -7,8 +7,7 @@ interface ArticleProps {
 }
 
 export default function Article({ article }: ArticleProps) {
-  const { title, author, datePosted, slug, articleImage } =
-    article.data[0].attributes
+  const { title, author, datePosted, slug, articleImage } = article.attributes
   const { url } = articleImage.data.attributes
 
   return (

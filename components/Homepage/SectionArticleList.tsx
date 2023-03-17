@@ -29,7 +29,7 @@ export default function SectionArticleList({ articlesData }: ArticleListProps) {
       />
       <div className='container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 pt-8 pb-12'>
         {latestArticles.map((article: ArticleI) => (
-          <Article key={article.data[0].attributes.slug} article={article} />
+          <Article key={article.attributes.slug} article={article} />
         ))}
       </div>
       <SolidButton
