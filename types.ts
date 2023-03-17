@@ -1,12 +1,14 @@
 export interface ArticleI {
-  attributes: {
-    title: string
-    author: string
-    datePosted: string
-    slug: string
-    articleImage: ArticleImageI
-  }
   id: number
+  data: {
+    attributes: {
+      title: string
+      author: string
+      datePosted: string
+      content: string
+      articleImage: ArticleImageI
+    }
+  }[]
 }
 export interface ArticleImageI {
   data: {
