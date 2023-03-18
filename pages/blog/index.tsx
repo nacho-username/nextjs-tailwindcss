@@ -21,7 +21,7 @@ export default function index({ articlesData }: BlogProps) {
           News Articles
         </h1>
         <section className='container mx-auto grid grid-cols-1 md:grid-cols-3 items-start gap-8 md:gap-4 px-8 md:px-0 pt-8 pb-12'>
-          {articlesData.data.map((article: any) => (
+          {articlesData.map((article: any) => (
             <div key={article.id} className=' text-white'>
               <Article article={article} />
             </div>
