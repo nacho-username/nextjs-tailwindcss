@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { API_URL } from '../../config/index'
 import { ServiceI } from '../../types'
 
 interface ServiceProps {
@@ -13,7 +14,7 @@ export default function ServiceItem({ service }: ServiceProps) {
       <div className='w-32'>
         <Image
           className='rounded-full'
-          src={`${process.env.NEXT_PUBLIC_STRAPI_URL}${url}`}
+          src={`${url}`}
           width={width}
           height={height}
           alt=''

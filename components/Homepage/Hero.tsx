@@ -1,3 +1,4 @@
+import { API_URL } from '../../config'
 import { BorderButton } from '../Shared/BorderButton'
 interface HomepageProps {
   title: string
@@ -16,7 +17,7 @@ export default function Hero({
   return (
     <main
       style={{
-        backgroundImage: `url(${process.env.NEXT_PUBLIC_STRAPI_URL}${heroBgImage})`,
+        backgroundImage: `url(${API_URL}${heroBgImage})`,
       }}
       className='bg-dark-grey bg-no-repeat bg-[length:600px_400px] pt-12 pb-24 md:bg-cover md:bg-left w-full lg:h-screen'
     >

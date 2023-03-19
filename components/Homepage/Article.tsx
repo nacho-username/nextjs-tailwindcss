@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import { API_URL, IMG_URL } from '../../config'
 import { ArticleI } from '../../types'
 import { formatDate } from '../../utils/helpers'
 interface ArticleProps {
@@ -17,7 +18,7 @@ export default function Article({ article }: ArticleProps) {
     >
       <div className='relative group'>
         <Image
-          src={`${process.env.NEXT_PUBLIC_STRAPI_URL}${url}`}
+          src={`${IMG_URL}${url}`}
           width={350}
           height={200}
           alt=''

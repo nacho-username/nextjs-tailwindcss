@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { API_URL, IMG_URL } from '../../config'
 import { SolidButton } from '../Shared/SolidButton'
 
 interface showcaseProps {
@@ -19,7 +20,7 @@ export default function MobileShowcaseItem({ showcase }: showcaseProps) {
       }
     >
       <Image
-        src={`${process.env.NEXT_PUBLIC_STRAPI_URL}${showcase.image.data.attributes.url}`}
+        src={`${IMG_URL}${showcase.image.data.attributes.url}`}
         alt=''
         width={showcase.image.data.attributes.width}
         height={showcase.image.data.attributes.height}

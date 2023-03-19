@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { API_URL, IMG_URL } from '../../config'
 import { SolidButton } from '../Shared/SolidButton'
 
 interface callToActionCardProps {
@@ -37,7 +38,7 @@ export default function CallToActionCard({
           />
         </div>
         <Image
-          src={`${process.env.NEXT_PUBLIC_STRAPI_URL}${image.url}`}
+          src={`${IMG_URL}${image.url}`}
           className='mt-8 -mb-4 md:-mb-32 md:mt-16 self-center'
           alt=''
           width={image.width}
@@ -66,7 +67,7 @@ export default function CallToActionCard({
           />
         </div>
         <Image
-          src={`${process.env.NEXT_PUBLIC_STRAPI_URL}${image.url}`}
+          src={`${IMG_URL}${image.url}`}
           className='mt-12 md:-mb-24 md:mt-16 self-center'
           alt=''
           width={image.width}

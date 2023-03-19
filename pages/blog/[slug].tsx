@@ -6,6 +6,7 @@ import { SolidButton } from '../../components/Shared/SolidButton'
 import { formatDate } from '../../utils/helpers'
 import ReactMarkdown from 'react-markdown'
 import { ArticleI } from '../../types'
+import { API_URL } from '../../config'
 
 interface ArticleProps {
   article: ArticleI
@@ -35,7 +36,7 @@ export default function BlogArticle({ article }: ArticleProps) {
         </h1>
         <img
           className='w-full h-96 bg-fixed object-cover rounded-xl'
-          src={`${process.env.NEXT_PUBLIC_STRAPI_URL}${imageUrl}`}
+          src={`${imageUrl}`}
           alt=''
         />
         <h4 className='text-lg text-gray-400'>
@@ -65,7 +66,7 @@ export async function getServerSideProps({
   try {
     const { slug } = params
     const res = await axios.get(
-      `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/articles?populate=deep&filters[slug][$eq]=${slug}`
+      `${API_URL}/api/articles?populate=deep&filters[slug][$eq]=${slug}`
     )
     const article = res.data
     return {

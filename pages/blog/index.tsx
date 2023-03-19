@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Layout from '../../components/Layout'
 import Article from '../../components/Homepage/Article'
 import { ArticleI } from '../../types'
+import { API_URL } from '../../config'
 
 interface BlogProps {
   articlesData: ArticleI[]
@@ -34,9 +35,7 @@ export default function index({ articlesData }: BlogProps) {
 
 export async function getServerSideProps() {
   try {
-    const articles = await axios.get(
-      `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/articles?populate=deep`
-    )
+    const articles = await axios.get(`${API_URL}/api/articles?populate=deep`)
 
     return {
       props: {
