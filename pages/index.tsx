@@ -74,7 +74,7 @@ export async function getServerSideProps() {
     return {
       props: {
         homepageData: homepage.data.attributes,
-        articlesData: articles.data,
+        // articlesData: articles.data,
       },
     }
   } catch (error: any) {
