@@ -69,7 +69,7 @@ export async function getServerSideProps() {
   // )
   try {
     const homepage = getHomepageData.data
-    const articles = getArticleData.data
+    // const articles = getArticleData.data
 
     return {
       props: {
