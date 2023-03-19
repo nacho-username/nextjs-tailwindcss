@@ -60,32 +60,32 @@ const Home = ({
   )
 }
 
-export async function getServerSideProps() {
-  const getHomepageData = await axios.get(
-    `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/homepage?populate=deep`
-  )
-  const getArticleData: StrapiArticleResponseI = await axios.get(
-    `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/articles?populate=deep`
-  )
-  try {
-    const homepage = getHomepageData.data
-    const articles = getArticleData.data
+// export async function getServerSideProps() {
+//   const getHomepageData = await axios.get(
+//     `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/homepage?populate=deep`
+//   )
+//   const getArticleData: StrapiArticleResponseI = await axios.get(
+//     `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/articles?populate=deep`
+//   )
+//   try {
+//     const homepage = getHomepageData.data
+//     const articles = getArticleData.data
 
-    return {
-      props: {
-        homepageData: homepage.data.attributes,
-        articlesData: articles.data,
-      },
-    }
-  } catch (error: any) {
-    return {
-      props: {
-        error: {
-          message: error.message,
-        },
-      },
-    }
-  }
-}
+//     return {
+//       props: {
+//         homepageData: homepage.data.attributes,
+//         articlesData: articles.data,
+//       },
+//     }
+//   } catch (error: any) {
+//     return {
+//       props: {
+//         error: {
+//           message: error.message,
+//         },
+//       },
+//     }
+//   }
+// }
 
 export default Home
