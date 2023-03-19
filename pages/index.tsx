@@ -61,10 +61,10 @@ const Home = ({
 
 export async function getServerSideProps() {
   const getHomepageData = await axios.get(
-    `${process.env.NEXT_PUBLIC_STRAPI_URL}api/homepage?populate=deep`
+    `https://waterfall-strapi.herokuapp.com/api/homepage?populate=deep`
   )
   const getArticleData: StrapiArticleResponseI = await axios.get(
-    `${process.env.NEXT_PUBLIC_STRAPI_URL}api/articles?populate=deep`
+    `https://waterfall-strapi.herokuapp.com/api/articles?populate=deep`
   )
   try {
     const homepage = getHomepageData.data
