@@ -37,7 +37,7 @@ export default function CallToActionCard({
           />
         </div>
         <Image
-          src={`http://localhost:1337${image.url}`}
+          src={`${process.env.NEXT_PUBLIC_STRAPI_URL}${image.url}`}
           className='mt-8 -mb-4 md:-mb-32 md:mt-16 self-center'
           alt=''
           width={image.width}
@@ -66,7 +66,7 @@ export default function CallToActionCard({
           />
         </div>
         <Image
-          src={`http://localhost:1337${image.url}`}
+          src={`${process.env.NEXT_PUBLIC_STRAPI_URL}${image.url}`}
           className='mt-12 md:-mb-24 md:mt-16 self-center'
           alt=''
           width={image.width}

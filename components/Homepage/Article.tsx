@@ -17,7 +17,7 @@ export default function Article({ article }: ArticleProps) {
     >
       <div className='relative group'>
         <Image
-          src={`http://localhost:1337${url}`}
+          src={`${process.env.NEXT_PUBLIC_STRAPI_URL}${url}`}
           width={350}
           height={200}
           alt=''

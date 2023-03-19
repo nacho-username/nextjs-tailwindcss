@@ -13,7 +13,7 @@ export default function ServiceItem({ service }: ServiceProps) {
       <div className='w-32'>
         <Image
           className='rounded-full'
-          src={`http://localhost:1337${url}`}
+          src={`${process.env.NEXT_PUBLIC_STRAPI_URL}${url}`}
           width={width}
           height={height}
           alt=''

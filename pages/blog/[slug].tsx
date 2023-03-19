@@ -35,7 +35,7 @@ export default function BlogArticle({ article }: ArticleProps) {
         </h1>
         <img
           className='w-full h-96 bg-fixed object-cover rounded-xl'
-          src={`http://localhost:1337${imageUrl}`}
+          src={`${process.env.NEXT_PUBLIC_STRAPI_URL}${imageUrl}`}
           alt=''
         />
         <h4 className='text-lg text-gray-400'>
@@ -65,7 +65,7 @@ export async function getServerSideProps({
   try {
     const { slug } = params
     const res = await axios.get(
-      `http://localhost:1337/api/articles?populate=deep&filters[slug][$eq]=${slug}`
+      `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/articles?populate=deep&filters[slug][$eq]=${slug}`
     )
     const article = res.data
     return {
