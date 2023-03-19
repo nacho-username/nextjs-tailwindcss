@@ -27,65 +27,64 @@ const Home = ({
   }
 
   return (
-    <h1>Testing</h1>
-    // <Layout
-    //   meta={{
-    //     title: MetaTitle,
-    //     description: MetaDescription,
-    //   }}
-    // >
-    //   <Hero homepageData={homepageData.hero} />
-    //   {!isMobile && (
-    //     <WhoWeAreSection whoWeAreData={homepageData.headerWhoWeAre} />
-    //   )}
-    //   <CallToActionCardList
-    //     showcaseCardData={homepageData.showcaseCard}
-    //     connectCardData={homepageData.connectCard}
-    //   />
-    //   <SectionWhyNext
-    //     whyNextHeader={homepageData.headerWhyNext}
-    //     featureCards={homepageData.NextFeatureCards}
-    //   />
-    //   <SectionNextShowcase
-    //     nextShowcaseHeader={homepageData.portfolioHeaderNext}
-    //     nextShowcaseData={homepageData.showcaseNext}
-    //   />
-    //   <SectionServices
-    //     serviceHeader={homepageData.servicesWeOfferHeader}
-    //     servicesList={homepageData.servicesWeOffer}
-    //   />
-    //   <SectionCaseStudy />
-    //   <SectionArticleList articlesData={articlesData} />
-    // </Layout>
+    <Layout
+      meta={{
+        title: MetaTitle,
+        description: MetaDescription,
+      }}
+    >
+      <Hero homepageData={homepageData.hero} />
+      {!isMobile && (
+        <WhoWeAreSection whoWeAreData={homepageData.headerWhoWeAre} />
+      )}
+      <CallToActionCardList
+        showcaseCardData={homepageData.showcaseCard}
+        connectCardData={homepageData.connectCard}
+      />
+      <SectionWhyNext
+        whyNextHeader={homepageData.headerWhyNext}
+        featureCards={homepageData.NextFeatureCards}
+      />
+      <SectionNextShowcase
+        nextShowcaseHeader={homepageData.portfolioHeaderNext}
+        nextShowcaseData={homepageData.showcaseNext}
+      />
+      <SectionServices
+        serviceHeader={homepageData.servicesWeOfferHeader}
+        servicesList={homepageData.servicesWeOffer}
+      />
+      <SectionCaseStudy />
+      <SectionArticleList articlesData={articlesData} />
+    </Layout>
   )
 }
 
-// export async function getServerSideProps() {
-//   const getHomepageData = await axios.get(
-//     `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/homepage?populate=deep`
-//   )
-//   const getArticleData: StrapiArticleResponseI = await axios.get(
-//     `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/articles?populate=deep`
-//   )
-//   try {
-//     const homepage = getHomepageData.data
-//     const articles = getArticleData.data
+export async function getServerSideProps() {
+  const getHomepageData = await axios.get(
+    `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/homepage?populate=deep`
+  )
+  const getArticleData: StrapiArticleResponseI = await axios.get(
+    `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/articles?populate=deep`
+  )
+  try {
+    const homepage = getHomepageData.data
+    const articles = getArticleData.data
 
-//     return {
-//       props: {
-//         homepageData: homepage.data.attributes,
-//         articlesData: articles.data,
-//       },
-//     }
-//   } catch (error: any) {
-//     return {
-//       props: {
-//         error: {
-//           message: error.message,
-//         },
-//       },
-//     }
-//   }
-// }
+    return {
+      props: {
+        homepageData: homepage.data.attributes,
+        articlesData: articles.data,
+      },
+    }
+  } catch (error: any) {
+    return {
+      props: {
+        error: {
+          message: error.message,
+        },
+      },
+    }
+  }
+}
 
 export default Home
