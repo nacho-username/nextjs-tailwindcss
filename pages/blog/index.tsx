@@ -35,8 +35,9 @@ export default function index({ articlesData }: BlogProps) {
 export async function getServerSideProps() {
   try {
     const articles = await axios.get(
-      'http://localhost:1337/api/articles?populate=deep'
+      `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/articles?populate=deep`
     )
+
     return {
       props: {
         articlesData: articles.data,
