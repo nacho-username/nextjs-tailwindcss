@@ -37,11 +37,11 @@ const Home = ({
       {!isMobile && (
         <WhoWeAreSection whoWeAreData={homepageData.headerWhoWeAre} />
       )}
-      <CallToActionCardList
+      {/* <CallToActionCardList
         showcaseCardData={homepageData.showcaseCard}
         connectCardData={homepageData.connectCard}
-      />
-      <SectionWhyNext
+      /> */}
+      {/* <SectionWhyNext
         whyNextHeader={homepageData.headerWhyNext}
         featureCards={homepageData.NextFeatureCards}
       />
@@ -54,17 +54,17 @@ const Home = ({
         servicesList={homepageData.servicesWeOffer}
       />
       <SectionCaseStudy />
-      <SectionArticleList articlesData={articlesData} />
+      <SectionArticleList articlesData={articlesData} /> */}
     </Layout>
   )
 }
 
 export async function getServerSideProps() {
   const getHomepageData = await axios.get(
-    `https://waterfall-strapi.herokuapp.com/api/homepage?populate=deep`
+    `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/homepage?populate=deep`
   )
   const getArticleData: StrapiArticleResponseI = await axios.get(
-    `https://waterfall-strapi.herokuapp.com/api/articles?populate=deep`
+    `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/articles?populate=deep`
   )
   try {
     const homepage = getHomepageData.data
