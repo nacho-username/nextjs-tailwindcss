@@ -27,44 +27,45 @@ const Home = ({
   }
 
   return (
-    <Layout
-      meta={{
-        title: MetaTitle,
-        description: MetaDescription,
-      }}
-    >
-      <Hero homepageData={homepageData.hero} />
-      {!isMobile && (
-        <WhoWeAreSection whoWeAreData={homepageData.headerWhoWeAre} />
-      )}
-      <CallToActionCardList
-        showcaseCardData={homepageData.showcaseCard}
-        connectCardData={homepageData.connectCard}
-      />
-      <SectionWhyNext
-        whyNextHeader={homepageData.headerWhyNext}
-        featureCards={homepageData.NextFeatureCards}
-      />
-      <SectionNextShowcase
-        nextShowcaseHeader={homepageData.portfolioHeaderNext}
-        nextShowcaseData={homepageData.showcaseNext}
-      />
-      <SectionServices
-        serviceHeader={homepageData.servicesWeOfferHeader}
-        servicesList={homepageData.servicesWeOffer}
-      />
-      <SectionCaseStudy />
-      <SectionArticleList articlesData={articlesData} />
-    </Layout>
+    <h1>Testing</h1>
+    // <Layout
+    //   meta={{
+    //     title: MetaTitle,
+    //     description: MetaDescription,
+    //   }}
+    // >
+    //   <Hero homepageData={homepageData.hero} />
+    //   {!isMobile && (
+    //     <WhoWeAreSection whoWeAreData={homepageData.headerWhoWeAre} />
+    //   )}
+    //   <CallToActionCardList
+    //     showcaseCardData={homepageData.showcaseCard}
+    //     connectCardData={homepageData.connectCard}
+    //   />
+    //   <SectionWhyNext
+    //     whyNextHeader={homepageData.headerWhyNext}
+    //     featureCards={homepageData.NextFeatureCards}
+    //   />
+    //   <SectionNextShowcase
+    //     nextShowcaseHeader={homepageData.portfolioHeaderNext}
+    //     nextShowcaseData={homepageData.showcaseNext}
+    //   />
+    //   <SectionServices
+    //     serviceHeader={homepageData.servicesWeOfferHeader}
+    //     servicesList={homepageData.servicesWeOffer}
+    //   />
+    //   <SectionCaseStudy />
+    //   <SectionArticleList articlesData={articlesData} />
+    // </Layout>
   )
 }
 
 export async function getServerSideProps() {
   const getHomepageData = await axios.get(
-    'http://localhost:1337/api/homepage?populate=deep'
+    `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/homepage?populate=deep`
   )
   const getArticleData: StrapiArticleResponseI = await axios.get(
-    'http://localhost:1337/api/articles?populate=deep'
+    `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/articles?populate=deep`
   )
   try {
     const homepage = getHomepageData.data
