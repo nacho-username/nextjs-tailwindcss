@@ -39,7 +39,7 @@ export async function getServerSideProps() {
 
     return {
       props: {
-        articlesData: articles.data,
+        articlesData: articles.data.data,
       },
     }
   } catch (error: any) {
