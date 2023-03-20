@@ -18,7 +18,7 @@ export default function Article({ article }: ArticleProps) {
     >
       <div className='relative group'>
         <Image
-          src={`${IMG_URL}${url}`}
+          src={`${url}`}
           width={350}
           height={200}
           alt=''

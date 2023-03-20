@@ -15,7 +15,6 @@ interface ArticleProps {
 export default function BlogArticle({ article }: ArticleProps) {
   const { title, datePosted, content, articleImage } =
     article.data[0].attributes
-  console.log(article)
   const imageUrl = articleImage.data.attributes.url
   return (
     // <h1>test</h1>

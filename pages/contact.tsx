@@ -44,7 +44,6 @@ export default function ContactPage() {
 
     try {
       const res = await axios.post('/api/send-contact-email', formData)
-      console.log(res)
       setSuccessMessage(res.data.message)
 
       reset()

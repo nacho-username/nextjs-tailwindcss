@@ -16,7 +16,7 @@ export default function DesktopShowcaseItem({ showcase }: showcaseProps) {
   return (
     <>
       <Image
-        src={`${IMG_URL}${showcase.image.data.attributes.url}`}
+        src={`${showcase.image.data.attributes.url}`}
         alt=''
         width={showcase.image.data.attributes.width}
         height={showcase.image.data.attributes.height}

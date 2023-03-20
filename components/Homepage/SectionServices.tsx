@@ -18,7 +18,6 @@ export default function SectionServices({
   servicesList: ServiceListProps
 }) {
   const { title, description } = serviceHeader
-  console.log(servicesList)
   return (
     <section className='bg-beige text-center text-white pt-12 pb-12'>
       <Header

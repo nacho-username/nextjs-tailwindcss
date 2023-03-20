@@ -38,7 +38,7 @@ const Home = ({
       {!isMobile && (
         <WhoWeAreSection whoWeAreData={homepageData.headerWhoWeAre} />
       )}
-      {/* <CallToActionCardList
+      <CallToActionCardList
         showcaseCardData={homepageData.showcaseCard}
         connectCardData={homepageData.connectCard}
       />
@@ -55,26 +55,26 @@ const Home = ({
         servicesList={homepageData.servicesWeOffer}
       />
       <SectionCaseStudy />
-      <SectionArticleList articlesData={articlesData} /> */}
+      <SectionArticleList articlesData={articlesData} />
     </Layout>
   )
 }
 
 export async function getServerSideProps() {
   const getHomepageData = await axios.get(
-    `https://waterfall-strapi.herokuapp.com/api/homepage?populate=deep`
+    `${API_URL}/api/homepage?populate=deep`
   )
-  // const getArticleData: StrapiArticleResponseI = await axios.get(
-  //   `${API_URL}/api/articles?populate=deep`
-  // )
+  const getArticleData: StrapiArticleResponseI = await axios.get(
+    `${API_URL}/api/articles?populate=deep`
+  )
   try {
     const homepage = getHomepageData.data
-    // const articles = getArticleData.data
+    const articles = getArticleData.data
 
     return {
       props: {
         homepageData: homepage.data.attributes,
-        // articlesData: articles.data,
+        articlesData: articles.data,
       },
     }
   } catch (error: any) {

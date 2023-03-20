@@ -38,7 +38,7 @@ export default function CallToActionCard({
           />
         </div>
         <Image
-          src={`${IMG_URL}${image.url}`}
+          src={`${image.url}`}
           className='mt-8 -mb-4 md:-mb-32 md:mt-16 self-center'
           alt=''
           width={image.width}
@@ -67,7 +67,7 @@ export default function CallToActionCard({
           />
         </div>
         <Image
-          src={`${IMG_URL}${image.url}`}
+          src={`${image.url}`}
           className='mt-12 md:-mb-24 md:mt-16 self-center'
           alt=''
           width={image.width}

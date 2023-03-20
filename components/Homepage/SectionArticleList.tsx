@@ -15,8 +15,8 @@ interface ArticleListProps {
 }
 
 export default function SectionArticleList({ articlesData }: ArticleListProps) {
-  const sortedArticles = sortArticlesByDatePosted(articlesData)
-  const latestArticles = limitByNumber(sortedArticles, 3)
+  // const sortedArticles = sortArticlesByDatePosted(articlesData)
+  // const latestArticles = limitByNumber(sortedArticles, 3)
 
   return (
     <section className='py-12 md:py-16 px-8 md:px-4 text-center bg-white'>
@@ -28,7 +28,7 @@ export default function SectionArticleList({ articlesData }: ArticleListProps) {
         classes='text-center'
       />
       <div className='container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 pt-8 pb-12'>
-        {latestArticles.map((article: ArticleI) => (
+        {articlesData.map((article: ArticleI) => (
           <Article key={article.attributes.slug} article={article} />
         ))}
       </div>

@@ -17,7 +17,7 @@ export default function Hero({
   return (
     <main
       style={{
-        backgroundImage: `url(${API_URL}${heroBgImage})`,
+        backgroundImage: `url(${heroBgImage})`,
       }}
       className='bg-dark-grey bg-no-repeat bg-[length:600px_400px] pt-12 pb-24 md:bg-cover md:bg-left w-full lg:h-screen'
     >
