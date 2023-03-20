@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { API_URL, IMG_URL } from '../../config'
+import { IMG_URL } from '../../config'
 import { SolidButton } from '../Shared/SolidButton'
 
 interface showcaseProps {

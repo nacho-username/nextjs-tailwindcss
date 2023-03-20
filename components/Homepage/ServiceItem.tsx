@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import { API_URL } from '../../config/index'
 import { ServiceI } from '../../types'
 
 interface ServiceProps {
