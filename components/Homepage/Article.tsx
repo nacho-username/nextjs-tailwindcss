@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { API_URL, IMG_URL } from '../../config'
+import { IMG_URL } from '../../config'
 import { ArticleI } from '../../types'
 import { formatDate } from '../../utils/helpers'
 interface ArticleProps {
